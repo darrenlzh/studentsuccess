@@ -21,6 +21,9 @@ $RECYCLE.BIN/
 # Operating System Files
 # =========================
 
+*.yml
+node_modules/*
+
 # OSX
 # =========================
 

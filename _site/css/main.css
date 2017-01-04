@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 2px solid red; }
+
+.main-container {
+  border: 1px solid yellow;
+  height: auto; }
+
+.footer {
+  border: 1px dotted green; }
