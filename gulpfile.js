@@ -3,6 +3,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var pug         = require('gulp-pug');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -52,12 +53,23 @@ gulp.task('sass', function () {
 });
 
 /**
+  * Compile pug index to html
+  */
+gulp.task('pug', function(){
+  return gulp.src('_page/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('./'));
+});
+
+/**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
     gulp.watch('_sass/*.sass', ['sass']);
-    gulp.watch(['*.html'], ['jekyll-rebuild']);
+    gulp.watch(['_includes/*.pug', '_page/*.pug'], ['pug']);
+    gulp.watch(['index.html'], ['jekyll-rebuild']);
+
 });
 
 /**
