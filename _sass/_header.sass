@@ -1,3 +1,58 @@
 header
   height: 100vh
-  border: 1px solid blue
+  display: flex
+  flex-direction: column
+  .header
+    height: 30vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 0 50px
+  .header__logo
+    margin: 20px 0
+    img
+      width: 250px
+      height: auto
+  .header__title
+    img
+      width: 400px
+      height: auto
+  .color-accent
+  	height: 20px
+  	border-bottom: 5px solid $UBBlue
+  	display: flex
+  	flex-direction: row
+  	width: 100%
+  	div
+  		height: 100%
+  		&:nth-child(1)
+  			width: 10%
+  			background: $LetchworthAutumn
+  		&:nth-child(2)
+  			width: 10%
+  			background: $SolarStrand
+  		&:nth-child(3)
+  			width: 10%
+  			background: $LakeLaSalle
+  		&:nth-child(4)
+  			width: 70%
+  			background: $UBBlue
+  .hero
+  	height: 70vh
+    border-bottom: 5px solid $UBBlue
+  	background:
+  		image: url(http://www.acsu.buffalo.edu/~zhanhuil/assets/images/student-studying.jpg)
+  		size: cover
+  		attachment: fixed
+  		repeat: no-repeat
+  		position: center 0
+  	filter: blur(5px)
+  .tagline
+    img
+      width: 900px
+      height: auto
+      position: absolute
+      top: 50%
+      margin-left: 60px
+      &:hover
+        cursor: default

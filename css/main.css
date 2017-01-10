@@ -1,15 +1,110 @@
+@import url(vendor/bootstrap.min.css);
+@font-face {
+  font-family: 'Freeland';
+  src: url(https://cdn.rawgit.com/darrenlzh/ssr-project/master/assets/fonts/Freeland.woff); }
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url(https://cdn.rawgit.com/darrenlzh/ssr-project/master/assets/fonts/SofiaWebRegular.woff); }
+
+@font-face {
+  font-family: 'Sofia Pro Medium';
+  src: url(https://cdn.rawgit.com/darrenlzh/ssr-project/master/assets/fonts/SofiaWebMedium.woff); }
+
+@font-face {
+  font-family: 'Sofia Pro Light';
+  src: url(https://cdn.rawgit.com/darrenlzh/ssr-project/master/assets/fonts/SofiaWebLight.woff); }
+
+@font-face {
+  font-family: 'Sofia Pro UltraLight';
+  src: url(https://cdn.rawgit.com/darrenlzh/ssr-project/master/assets/fonts/SofiaProUltraLight.otf); }
+
+@font-face {
+  font-family: 'More Pro Book';
+  src: url(https://cdn.rawgit.com/darrenlzh/ssr-project/master/assets/fonts/MoreWebBook.woff); }
+
+@font-face {
+  font-family: 'More Pro Bold';
+  src: url(https://cdn.rawgit.com/darrenlzh/ssr-project/master/assets/fonts/MoreWebBold.woff); }
+
 header {
   height: 100vh;
-  border: 1px solid blue; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  header .header {
+    height: 30vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    padding: 0 50px; }
+  header .header__logo {
+    margin: 20px 0; }
+    header .header__logo img {
+      width: 250px;
+      height: auto; }
+  header .header__title img {
+    width: 400px;
+    height: auto; }
+  header .color-accent {
+    height: 20px;
+    border-bottom: 5px solid #005BBB;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    width: 100%; }
+    header .color-accent div {
+      height: 100%; }
+      header .color-accent div:nth-child(1) {
+        width: 10%;
+        background: #E56A54; }
+      header .color-accent div:nth-child(2) {
+        width: 10%;
+        background: #FFC72C; }
+      header .color-accent div:nth-child(3) {
+        width: 10%;
+        background: #00C7B1; }
+      header .color-accent div:nth-child(4) {
+        width: 70%;
+        background: #005BBB; }
+  header .hero {
+    height: 70vh;
+      height-border-bottom: 5px solid #005BBB;
+    background-image: url(http://www.acsu.buffalo.edu/~zhanhuil/assets/images/student-studying.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    -webkit-filter: blur(5px);
+            filter: blur(5px); }
+  header .tagline img {
+    width: 900px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    margin-left: 60px; }
+    header .tagline img:hover {
+      cursor: default; }
+
+.main {
+  height: 2000px;
+  border-top: 5px solid #005BBB;
+  z-index: 1; }
+  .main .introduction {
+    text-align: center; }
 
 body {
   margin: 0;
   padding: 0;
-  border: 2px solid red; }
+  font-family: 'Sofia Pro', sans-serif; }
 
-.main-container {
-  border: 1px solid yellow;
-  height: auto; }
+img:hover {
+  cursor: pointer; }
 
 footer {
   border: 1px dotted green; }
