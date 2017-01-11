@@ -48,11 +48,25 @@ header
   		position: center 0
   	filter: blur(5px)
   .tagline
+    width: 90%
+    position: absolute
+    top: 45%
+    display: flex
+    flex-direction: row
+    justify-content: start
+    align-items: center
+    margin-left: 10%
     img
-      width: 900px
-      height: auto
-      position: absolute
-      top: 50%
-      margin-left: 60px
       &:hover
         cursor: default
+      &:nth-child(1)
+        width: 50%
+        height: auto
+        margin-right: 2%
+      &:nth-child(2)
+        width: 30%
+        height: auto
+    @media screen and (max-width: $breakSmall)
+      flex-direction: column
+      width: 100%
+      margin-left: 0

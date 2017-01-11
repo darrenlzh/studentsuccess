@@ -82,14 +82,34 @@ header {
     background-position: center 0;
     -webkit-filter: blur(5px);
             filter: blur(5px); }
-  header .tagline img {
-    width: 900px;
-    height: auto;
+  header .tagline {
+    width: 90%;
     position: absolute;
-    top: 50%;
-    margin-left: 60px; }
+    top: 45%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: start;
+        justify-content: start;
+    -ms-flex-align: center;
+        align-items: center;
+    margin-left: 10%; }
     header .tagline img:hover {
       cursor: default; }
+    header .tagline img:nth-child(1) {
+      width: 50%;
+      height: auto;
+      margin-right: 2%; }
+    header .tagline img:nth-child(2) {
+      width: 30%;
+      height: auto; }
+    @media screen and (max-width: 767px) {
+      header .tagline {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        width: 100%;
+        margin-left: 0; } }
 
 .main {
   height: 2000px;
@@ -97,6 +117,42 @@ header {
   z-index: 1; }
   .main .introduction {
     text-align: center; }
+  .main #summary {
+    padding: 150px 0 50px; }
+  .main #infographics {
+    padding: 50px 0;
+    height: auto;
+    width: 100%;
+    margin: 0; }
+    .main #infographics .infographic {
+      height: 300px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; }
+      .main #infographics .infographic .infographic__icon {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #E1E1E1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center; }
+        .main #infographics .infographic .infographic__icon img:hover {
+          cursor: default; }
+      .main #infographics .infographic .infographic__text {
+        color: #666666;
+        padding: 50px 20px;
+        text-align: center;
+        height: 150px;
+        font-size: 16px; }
 
 body {
   margin: 0;
