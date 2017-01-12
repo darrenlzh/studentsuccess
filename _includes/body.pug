@@ -1,6 +1,6 @@
 .main
-  .container
-    .introduction
+  .main-wrap
+    .container.introduction
       .row#summary
         h1 What we do
         p The Office of Student and Retention, in collboration with all divisions of the university, helps students define their goals and gain the skills needed to be successful at UB and beyond. Dedicated staff is here to assist you with developing the best academic plan while connecting you to helpful resources and providing a climate of continuous support. Wherever you are in your undergraduate career, our expertise will guide you to a greater understanding of yourself and the success you're aiming for.
@@ -17,3 +17,6 @@
         .infographic.col-xs-12.col-sm-6.col-md-3.col-lg-3
           .infographic__icon: img(src="img/graphics/graduation.png")
           .infographic__text Graduate on time with Finish in 4
+    .container.grid
+      .row#navigation
+        include ../_includes/grid-about.pug

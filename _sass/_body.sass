@@ -1,3 +1,4 @@
+@import 'grid'
 .main
   height: 2000px
   border-top: 5px solid $UBBlue
@@ -7,7 +8,7 @@
     text-align: center
 
   #summary
-    padding: 150px 0 50px
+    padding: 150px 150px 50px
 
   #infographics
     padding: 50px 0
@@ -20,7 +21,7 @@
       flex-direction: column
       justify-content: center
       align-items: center
-      .infographic__icon
+      &__icon
         width: 150px
         height: 150px
         border-radius: 50%
@@ -30,7 +31,7 @@
         align-items: center
         img:hover
           cursor: default
-      .infographic__text
+      &__text
         color: $PutnamGray
         padding: 50px 20px
         text-align: center

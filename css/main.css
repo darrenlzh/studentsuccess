@@ -41,15 +41,26 @@ header {
         flex-direction: column;
     -ms-flex-pack: center;
         justify-content: center;
-    padding: 0 50px; }
-  header .header__logo {
-    margin: 20px 0; }
-    header .header__logo img {
-      width: 250px;
+    padding-left: 5%; }
+    header .header__logo {
+      margin: 20px 0; }
+      @media screen and (max-width: 500px) {
+        header .header__logo {
+          margin: 10px 0; } }
+      header .header__logo img {
+        width: 250px;
+        height: auto; }
+        @media screen and (max-width: 500px) {
+          header .header__logo img {
+            width: 166.66px;
+            height: auto; } }
+    header .header__title img {
+      width: 400px;
       height: auto; }
-  header .header__title img {
-    width: 400px;
-    height: auto; }
+      @media screen and (max-width: 500px) {
+        header .header__title img {
+          width: 266.66px;
+          height: auto; } }
   header .color-accent {
     height: 20px;
     border-bottom: 5px solid #005BBB;
@@ -111,6 +122,126 @@ header {
         width: 100%;
         margin-left: 0; } }
 
+.main .grid .row {
+  width: 100%;
+  margin: 0; }
+
+.main .grid .box {
+  color: white;
+  font-size: 2em;
+  padding: 0; }
+  .main .grid .box:nth-of-type(2) .view-expand {
+    margin-left: -100%; }
+  .main .grid .box:nth-of-type(3) .view-expand {
+    margin-left: -200%; }
+  .main .grid .box:nth-of-type(4) .view-expand {
+    margin-left: -300%; }
+  .main .grid .box.about .view {
+    background: #FFC72C; }
+  .main .grid .box .view {
+    display: block;
+    overflow: hidden; }
+    .main .grid .box .view__inner, .main .grid .box .view__inner--hovered {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      height: inherit;
+      padding: 10%;
+      text-align: center;
+      transition: -webkit-transform 0.3s cubic-bezier(0.81, 0.01, 0.23, 0.99), opacity 0.1s ease-in-out;
+      transition: transform 0.3s cubic-bezier(0.81, 0.01, 0.23, 0.99), opacity 0.1s ease-in-out; }
+    .main .grid .box .view__inner--hovered {
+      opacity: 0;
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+      font-size: .5em; }
+
+.main .grid .view-expand {
+  overflow: hidden;
+  max-height: 0;
+  width: 400%;
+  color: #666666;
+  transition: max-height .3s ease; }
+  .main .grid .view-expand.three-cols {
+    width: 133.4%; }
+    .main .grid .view-expand.three-cols.is-expanded {
+      margin-bottom: 8px; }
+    .main .grid .view-expand.three-cols:hover {
+      cursor: pointer; }
+    .main .grid .view-expand.three-cols__inner--hovered {
+      height: 0;
+      padding-top: 0;
+      padding-bottom: 0; }
+  .main .grid .view-expand .arrow {
+    display: block;
+    border-bottom: 8px solid black;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    height: 0;
+    width: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute; }
+  .main .grid .view-expand.about .arrow {
+    border-bottom: 8px solid #FFC72C; }
+  .main .grid .view-expand.staff .arrow {
+    border-bottom: 8px solid #E56A54; }
+  .main .grid .view-expand.sas {
+    font-size: 1.7em; }
+    .main .grid .view-expand.sas .arrow {
+      border-bottom: 8px solid #00c7B1; }
+  .main .grid .view-expand.finish-in-4 .arrow {
+    border-bottom: 8px solid #005BBB; }
+  .main .grid .view-expand.student-heading .arrow {
+    border-bottom: 8px solid #E1E1E1; }
+  .main .grid .view-expand .view-expand {
+    display: block;
+    position: relative;
+    z-index: 1;
+    max-height: 550px; }
+  .main .grid .view-expand .close {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: #666666;
+    opacity: 1; }
+    .main .grid .view-expand .close:hover {
+      cursor: pointer;
+      top: 31px;
+      right: 21px; }
+  .main .grid .view-expand.about .view:hover {
+    background: #ffc013; }
+  .main .grid .view-expand.staff .view:hover {
+    background: #e2573e; }
+    .main .grid .view-expand.staff .view:hover span {
+      font-size: .7em; }
+  .main .grid .view-expand.sas {
+    font-size: 1.7em; }
+    .main .grid .view-expand.sas .view:hover {
+      background: #00b8a3; }
+      .main .grid .view-expand.sas .view:hover .view__inner--hovered {
+        font-size: .6em; }
+  .main .grid .view-expand.finish-in-4 .view:hover {
+    background: #004fa2; }
+  .main .grid .view-expand .view-expand .close {
+    display: none; }
+  .main .grid .view-expand .view:hover {
+    cursor: pointer; }
+    .main .grid .view-expand .view:hover .view__inner {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      opacity: 0; }
+    .main .grid .view-expand .view:hover .view__inner--hovered {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      opacity: 1; }
+
 .main {
   height: 2000px;
   border-top: 5px solid #005BBB;
@@ -118,7 +249,7 @@ header {
   .main .introduction {
     text-align: center; }
   .main #summary {
-    padding: 150px 0 50px; }
+    padding: 150px 150px 50px; }
   .main #infographics {
     padding: 50px 0;
     height: auto;
@@ -134,7 +265,7 @@ header {
           justify-content: center;
       -ms-flex-align: center;
           align-items: center; }
-      .main #infographics .infographic .infographic__icon {
+      .main #infographics .infographic__icon {
         width: 150px;
         height: 150px;
         border-radius: 50%;
@@ -145,9 +276,9 @@ header {
             justify-content: center;
         -ms-flex-align: center;
             align-items: center; }
-        .main #infographics .infographic .infographic__icon img:hover {
+        .main #infographics .infographic__icon img:hover {
           cursor: default; }
-      .main #infographics .infographic .infographic__text {
+      .main #infographics .infographic__text {
         color: #666666;
         padding: 50px 20px;
         text-align: center;
