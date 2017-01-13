@@ -1,32 +1,62 @@
-.main
-  .grid
-    .row
-      width: 100%
-      margin: 0
-    .box
-      color: white
-      font-size: 2em
-      padding: 0
-      &:nth-of-type(2)
-        .view-expand
-          margin-left: -100%
-      &:nth-of-type(3)
-        .view-expand
-          margin-left: -200%
-      &:nth-of-type(4)
-        .view-expand
-          margin-left: -300%
-      &.about .view
-        background: $SolarStrand
+.grid
+  .row
+    width: 100%
+    margin: 0
+  .box
+    color: white
+    font-size: 2em
+    padding: 0
+    &:nth-of-type(2) .view-expand
+      margin-left: -100%
+    &:nth-of-type(3) .view-expand
+      margin-left: -200%
+    &:nth-of-type(4) .view-expand
+      margin-left: -300%
+    &.about .view
+      background: $LetchworthAutumn
+    &.staff .view
+      background: $SolarStrand
+    &.sas .view
+      background: $LakeLaSalle
+    &.finish-in-4 .view
+      background: $UBBlue
+    .view
+      display: block
+      overflow: hidden
+      &__inner, &__inner--hovered
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: inherit
+        padding: 10%
+        text-align: center
+        transition: transform .3s cubic-bezier(.81,.01,.23,.99), opacity .1s ease-in-out
+      &__inner--hovered
+        opacity: 0
+        transform: translateY(100%)
+        font-size: .5em
+    .view-expand
+      overflow: hidden
+      max-height: 0
+      width: 400%
+      color: $PutnamGray
+      transition: max-height .3s ease
+      font-size: 15px
+      @media screen and (max-width: $breakSmall)
+        width: 200%
+      &.three-cols
+        width: 133.4%
 
-      &.is-expanded
-        margin-bottom: $viewExpandGap
-        .view
-  				&:hover
-  					cursor: pointer
-  				&__inner--hovered
-  					height: 0
-  					padding: 0
+    &.is-expanded
+      margin-bottom: $viewExpandGap
+      .view
+        &:hover
+          cursor: pointer
+        &__inner--hovered
+          height: 0
+          padding-top: 0
+          padding-bottom: 0
         .arrow
           display: block
           border-bottom: 8px solid black
@@ -38,95 +68,77 @@
           right: 0
           margin: 0 auto
           position: absolute
-        &.about
-  				.arrow
-  					border-bottom: 8px solid #FFC72C
-        &.staff
-  				.arrow
-  					border-bottom: 8px solid #E56A54
-        &.sas
-  				font-size: 1.7em
-  				.arrow
-  					border-bottom: 8px solid #00c7B1
-        &.finish-in-4
-  				.arrow
-  					border-bottom: 8px solid #005BBB
-        &.student-heading
-  				.arrow
-  					border-bottom: 8px solid #E1E1E1
-        .view-expand
-  				display: block
-  				position: relative
-  				z-index: 1
-  				max-height: 550px
-        .close
-  				position: absolute
-  				top: 30px
-  				right: 20px
-  				color: #666666
-  				// font-size: 50px
-  				opacity: 1
-  				&:hover
-  					cursor: pointer
-  					top: 31px
-  					right: 21px
-      &.is-collapsed
-        &.about
-  				.view:hover
-  					background: darken(#FFC72C, 5%)
-        &.staff
-  				.view:hover
-  					background: darken(#E56A54, 5%)
-  					span
-  						font-size: .7em
-        &.sas
-  				font-size: 1.7em
-  				.view:hover
-  					background: darken(#00C7B1, 3%)
-  					.view__inner--hovered
-  						font-size: .6em
-        &.finish-in-4
-  				.view:hover
-  					background: darken(#005BBB, 5%)
-        .view-expand
-  				// display: none
-  				.close
-  					display: none
-        .view
-  				&:hover
-  					cursor: pointer
-  					.view__inner
-  						transform: translateY(-100%)
-  						opacity: 0
-  					.view__inner--hovered
-  						transform: translateY(-100%)
-  						opacity: 1
-
-      .view
+      &.about .arrow
+        border-bottom: 8px solid $LetchworthAutumn
+      &.staff .arrow
+        border-bottom: 8px solid $SolarStrand
+      &.sas
+        font-size: 1.7em
+        .arrow
+          border-bottom: 8px solid $LakeLaSalle
+      &.finish-in-4 .arrow
+        border-bottom: 8px solid $UBBlue
+      &.student-heading .arrow
+        border-bottom: 8px solid $BairdPoint
+      .view-expand
         display: block
-        // height: 100%
-        overflow: hidden
-        // &:hover
-        //   cursor: pointer
-        &__inner, &__inner--hovered
-          display: flex
-          flex-direction: column
-          align-items: center
-          justify-content: center
-          height: inherit
-          padding: 10%
-          text-align: center
-          transition: transform .3s cubic-bezier(.81,.01,.23,.99), opacity .1s ease-in-out
-        &__inner--hovered
-          // display: none
-          opacity: 0
-          transform: translateY(100%)
-          font-size: .5em
-  		.view-expand
-  			overflow: hidden
-  			max-height: 0
-  			width: 400%
-  			color: #666666
-  			transition: max-height .3s ease
-  			&.three-cols
-  				width: 133.4%
+        position: relative
+        z-index: 1
+        max-height: 550px
+      .close
+        position: absolute
+        top: 30px
+        right: 20px
+        color: $PutnamGray
+        opacity: 1
+        &:hover
+          cursor: pointer
+          top: 31px
+          right: 21px
+    &.is-collapsed
+      &.about .view:hover
+        background: darken($LetchworthAutumn, 5%)
+      &.staff .view:hover
+        background: darken($SolarStrand, 5%)
+        span
+          font-size: .7em
+      &.sas
+        font-size: 1.7em
+        .view:hover
+          background: darken($LakeLaSalle, 3%)
+          .view__inner--hovered
+            font-size: .6em
+      &.finish-in-4 .view:hover
+        background: darken($UBBlue, 5%)
+      .view-expand .close
+        display: none
+      .view
+        &:hover
+          cursor: pointer
+          .view__inner
+            transform: translateY(-100%)
+            opacity: 0
+          .view__inner--hovered
+            transform: translateY(-100%)
+            opacity: 1
+
+#about, #staff, #sas, #finish-in-4, #student-story-2
+  height: 100%
+  width: 100%
+  padding: 50px
+  margin-top: $viewExpandGap
+  border: 5px solid
+  background: white
+
+#about
+  border-color: $LetchworthAutumn
+  height: 500px
+#staff
+  border-color: $SolarStrand
+  height: 500px
+#sas
+  border-color: $LakeLaSalle
+  height: 500px
+#finish-in-4
+  border-color: $UBBlue
+  height: 500px

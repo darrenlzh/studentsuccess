@@ -131,7 +131,7 @@ header {
   .main #summary {
     padding: 150px 150px 50px; }
   .main #infographics {
-    padding: 50px 0;
+    padding: 50px 0 0;
     height: auto;
     width: 100%;
     margin: 0; }
@@ -149,7 +149,7 @@ header {
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        background: #E1E1E1;
+        background: #005BBB;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: center;
@@ -165,28 +165,35 @@ header {
         height: 150px;
         font-size: 16px; }
 
-.main .grid .row {
+#nav-anchor {
+  height: 50px; }
+
+.grid .row {
   width: 100%;
   margin: 0; }
 
-.main .grid .box {
+.grid .box {
   color: white;
   font-size: 2em;
   padding: 0; }
-  .main .grid .box:nth-of-type(2) .view-expand {
+  .grid .box:nth-of-type(2) .view-expand {
     margin-left: -100%; }
-  .main .grid .box:nth-of-type(3) .view-expand {
+  .grid .box:nth-of-type(3) .view-expand {
     margin-left: -200%; }
-  .main .grid .box:nth-of-type(4) .view-expand {
+  .grid .box:nth-of-type(4) .view-expand {
     margin-left: -300%; }
-  .main .grid .box.about .view {
+  .grid .box.about .view {
+    background: #E56A54; }
+  .grid .box.staff .view {
     background: #FFC72C; }
-  .main .grid .box .view {
+  .grid .box.sas .view {
+    background: #00C7B1; }
+  .grid .box.finish-in-4 .view {
+    background: #005BBB; }
+  .grid .box .view {
     display: block;
     overflow: hidden; }
-    .main .grid .box .view:hover {
-      cursor: pointer; }
-    .main .grid .box .view__inner, .main .grid .box .view__inner--hovered {
+    .grid .box .view__inner, .grid .box .view__inner--hovered {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
@@ -200,92 +207,119 @@ header {
       text-align: center;
       transition: -webkit-transform 0.3s cubic-bezier(0.81, 0.01, 0.23, 0.99), opacity 0.1s ease-in-out;
       transition: transform 0.3s cubic-bezier(0.81, 0.01, 0.23, 0.99), opacity 0.1s ease-in-out; }
-    .main .grid .box .view__inner--hovered {
+    .grid .box .view__inner--hovered {
       opacity: 0;
       -webkit-transform: translateY(100%);
               transform: translateY(100%);
       font-size: .5em; }
-
-.main .grid .view-expand {
-  overflow: hidden;
-  max-height: 0;
-  width: 400%;
-  color: #666666;
-  transition: max-height .3s ease; }
-  .main .grid .view-expand.three-cols {
-    width: 133.4%; }
-    .main .grid .view-expand.three-cols.is-expanded {
-      margin-bottom: 8px; }
-    .main .grid .view-expand.three-cols:hover {
+  .grid .box .view-expand {
+    overflow: hidden;
+    max-height: 0;
+    width: 400%;
+    color: #666666;
+    transition: max-height .3s ease;
+    font-size: 15px; }
+    @media screen and (max-width: 767px) {
+      .grid .box .view-expand {
+        width: 200%; } }
+    .grid .box .view-expand.three-cols {
+      width: 133.4%; }
+  .grid .box.is-expanded {
+    margin-bottom: 8px; }
+    .grid .box.is-expanded .view:hover {
       cursor: pointer; }
-    .main .grid .view-expand.three-cols__inner--hovered {
+    .grid .box.is-expanded .view__inner--hovered {
       height: 0;
       padding-top: 0;
       padding-bottom: 0; }
-  .main .grid .view-expand .arrow {
-    display: block;
-    border-bottom: 8px solid black;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    height: 0;
-    width: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    position: absolute; }
-  .main .grid .view-expand.about .arrow {
-    border-bottom: 8px solid #FFC72C; }
-  .main .grid .view-expand.staff .arrow {
-    border-bottom: 8px solid #E56A54; }
-  .main .grid .view-expand.sas {
-    font-size: 1.7em; }
-    .main .grid .view-expand.sas .arrow {
-      border-bottom: 8px solid #00c7B1; }
-  .main .grid .view-expand.finish-in-4 .arrow {
-    border-bottom: 8px solid #005BBB; }
-  .main .grid .view-expand.student-heading .arrow {
-    border-bottom: 8px solid #E1E1E1; }
-  .main .grid .view-expand .view-expand {
-    display: block;
-    position: relative;
-    z-index: 1;
-    max-height: 550px; }
-  .main .grid .view-expand .close {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    color: #666666;
-    opacity: 1; }
-    .main .grid .view-expand .close:hover {
-      cursor: pointer;
-      top: 31px;
-      right: 21px; }
-  .main .grid .view-expand.about .view:hover {
-    background: #ffc013; }
-  .main .grid .view-expand.staff .view:hover {
+    .grid .box.is-expanded .view .arrow {
+      display: block;
+      border-bottom: 8px solid black;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      height: 0;
+      width: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      position: absolute; }
+    .grid .box.is-expanded.about .arrow {
+      border-bottom: 8px solid #E56A54; }
+    .grid .box.is-expanded.staff .arrow {
+      border-bottom: 8px solid #FFC72C; }
+    .grid .box.is-expanded.sas {
+      font-size: 1.7em; }
+      .grid .box.is-expanded.sas .arrow {
+        border-bottom: 8px solid #00C7B1; }
+    .grid .box.is-expanded.finish-in-4 .arrow {
+      border-bottom: 8px solid #005BBB; }
+    .grid .box.is-expanded.student-heading .arrow {
+      border-bottom: 8px solid #E1E1E1; }
+    .grid .box.is-expanded .view-expand {
+      display: block;
+      position: relative;
+      z-index: 1;
+      max-height: 550px; }
+    .grid .box.is-expanded .close {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      color: #666666;
+      opacity: 1; }
+      .grid .box.is-expanded .close:hover {
+        cursor: pointer;
+        top: 31px;
+        right: 21px; }
+  .grid .box.is-collapsed.about .view:hover {
     background: #e2573e; }
-    .main .grid .view-expand.staff .view:hover span {
+  .grid .box.is-collapsed.staff .view:hover {
+    background: #ffc013; }
+    .grid .box.is-collapsed.staff .view:hover span {
       font-size: .7em; }
-  .main .grid .view-expand.sas {
+  .grid .box.is-collapsed.sas {
     font-size: 1.7em; }
-    .main .grid .view-expand.sas .view:hover {
+    .grid .box.is-collapsed.sas .view:hover {
       background: #00b8a3; }
-      .main .grid .view-expand.sas .view:hover .view__inner--hovered {
+      .grid .box.is-collapsed.sas .view:hover .view__inner--hovered {
         font-size: .6em; }
-  .main .grid .view-expand.finish-in-4 .view:hover {
+  .grid .box.is-collapsed.finish-in-4 .view:hover {
     background: #004fa2; }
-  .main .grid .view-expand .view-expand .close {
+  .grid .box.is-collapsed .view-expand .close {
     display: none; }
-  .main .grid .view-expand .view:hover {
+  .grid .box.is-collapsed .view:hover {
     cursor: pointer; }
-    .main .grid .view-expand .view:hover .view__inner {
+    .grid .box.is-collapsed .view:hover .view__inner {
       -webkit-transform: translateY(-100%);
               transform: translateY(-100%);
       opacity: 0; }
-    .main .grid .view-expand .view:hover .view__inner--hovered {
+    .grid .box.is-collapsed .view:hover .view__inner--hovered {
       -webkit-transform: translateY(-100%);
               transform: translateY(-100%);
       opacity: 1; }
+
+#about, #staff, #sas, #finish-in-4, #student-story-2 {
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  margin-top: 8px;
+  border: 5px solid;
+  background: white; }
+
+#about {
+  border-color: #E56A54;
+  height: 500px; }
+
+#staff {
+  border-color: #FFC72C;
+  height: 500px; }
+
+#sas {
+  border-color: #00C7B1;
+  height: 500px; }
+
+#finish-in-4 {
+  border-color: #005BBB;
+  height: 500px; }
 
 body {
   margin: 0;
@@ -296,4 +330,5 @@ img:hover {
   cursor: pointer; }
 
 footer {
-  border: 1px dotted green; }
+  background: #E1E1E1;
+  height: 500px; }
