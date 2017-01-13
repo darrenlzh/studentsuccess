@@ -122,6 +122,49 @@ header {
         width: 100%;
         margin-left: 0; } }
 
+.main {
+  height: 2000px;
+  border-top: 5px solid #005BBB;
+  z-index: 1; }
+  .main .introduction {
+    text-align: center; }
+  .main #summary {
+    padding: 150px 150px 50px; }
+  .main #infographics {
+    padding: 50px 0;
+    height: auto;
+    width: 100%;
+    margin: 0; }
+    .main #infographics .infographic {
+      height: 300px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; }
+      .main #infographics .infographic__icon {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #E1E1E1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center; }
+        .main #infographics .infographic__icon img:hover {
+          cursor: default; }
+      .main #infographics .infographic__text {
+        color: #666666;
+        padding: 50px 20px;
+        text-align: center;
+        height: 150px;
+        font-size: 16px; }
+
 .main .grid .row {
   width: 100%;
   margin: 0; }
@@ -141,6 +184,8 @@ header {
   .main .grid .box .view {
     display: block;
     overflow: hidden; }
+    .main .grid .box .view:hover {
+      cursor: pointer; }
     .main .grid .box .view__inner, .main .grid .box .view__inner--hovered {
       display: -ms-flexbox;
       display: flex;
@@ -241,49 +286,6 @@ header {
       -webkit-transform: translateY(-100%);
               transform: translateY(-100%);
       opacity: 1; }
-
-.main {
-  height: 2000px;
-  border-top: 5px solid #005BBB;
-  z-index: 1; }
-  .main .introduction {
-    text-align: center; }
-  .main #summary {
-    padding: 150px 150px 50px; }
-  .main #infographics {
-    padding: 50px 0;
-    height: auto;
-    width: 100%;
-    margin: 0; }
-    .main #infographics .infographic {
-      height: 300px;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column;
-      -ms-flex-pack: center;
-          justify-content: center;
-      -ms-flex-align: center;
-          align-items: center; }
-      .main #infographics .infographic__icon {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background: #E1E1E1;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: center;
-            justify-content: center;
-        -ms-flex-align: center;
-            align-items: center; }
-        .main #infographics .infographic__icon img:hover {
-          cursor: default; }
-      .main #infographics .infographic__text {
-        color: #666666;
-        padding: 50px 20px;
-        text-align: center;
-        height: 150px;
-        font-size: 16px; }
 
 body {
   margin: 0;
