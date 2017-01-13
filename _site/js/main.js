@@ -22,6 +22,10 @@ function resizeBoxes() {
   });
 }
 
+// function headerParallax() {
+//   var
+// }
+
 function manageBoxes() {
   var views = document.querySelectorAll('div.box div.view');
   Array.prototype.forEach.call(views, function(view, i) {
