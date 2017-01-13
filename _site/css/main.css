@@ -224,6 +224,11 @@ header {
         width: 200%; } }
     .grid .box .view-expand.three-cols {
       width: 133.4%; }
+    .grid .box .view-expand .close {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      display: none; }
   .grid .box.is-expanded {
     margin-bottom: 8px; }
     .grid .box.is-expanded .view:hover {
@@ -265,7 +270,8 @@ header {
       top: 30px;
       right: 20px;
       color: #666666;
-      opacity: 1; }
+      opacity: 1;
+      display: block; }
       .grid .box.is-expanded .close:hover {
         cursor: pointer;
         top: 31px;
@@ -284,8 +290,6 @@ header {
         font-size: .6em; }
   .grid .box.is-collapsed.finish-in-4 .view:hover {
     background: #004fa2; }
-  .grid .box.is-collapsed .view-expand .close {
-    display: none; }
   .grid .box.is-collapsed .view:hover {
     cursor: pointer; }
     .grid .box.is-collapsed .view:hover .view__inner {

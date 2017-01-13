@@ -41,6 +41,13 @@ function manageBoxes() {
       }
     });
   });
+  var closes = document.querySelectorAll('div.box div.view-expand div.close');
+  Array.prototype.forEach.call(closes, function(close, i) {
+    close.addEventListener('click', function() {
+      this.parentNode.parentNode.classList.remove('is-expanded');
+      this.parentNode.parentNode.classList.add('is-collapsed');
+    });
+  });
 }
 
 window.bringIntoView_started = 0;
