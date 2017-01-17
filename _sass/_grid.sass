@@ -2,16 +2,17 @@
   .row
     width: 100%
     margin: 0
-  .box
-    color: white
-    font-size: 2em
-    padding: 0
+  #navigation .box
     &:nth-of-type(2) .view-expand
       margin-left: -100%
     &:nth-of-type(3) .view-expand
       margin-left: -200%
     &:nth-of-type(4) .view-expand
       margin-left: -300%
+  .box
+    color: white
+    font-size: 2em
+    padding: 0
     &.about .view
       background: $LetchworthAutumn
     &.staff .view
@@ -62,17 +63,17 @@
           height: 0
           padding-top: 0
           padding-bottom: 0
-        .arrow
-          display: block
-          border-bottom: 8px solid black
-          border-left: 8px solid transparent
-          border-right: 8px solid transparent
-          height: 0
-          width: 0
-          left: 0
-          right: 0
-          margin: 0 auto
-          position: absolute
+      .arrow
+        display: block
+        border-bottom: 8px solid black
+        border-left: 8px solid transparent
+        border-right: 8px solid transparent
+        height: 0
+        width: 0
+        left: 0
+        right: 0
+        margin: 0 auto
+        position: absolute
       &.about
         .arrow
           border-bottom: 8px solid $LetchworthAutumn
@@ -94,7 +95,7 @@
           border-bottom: 8px solid $UBBlue
         .close
           color: $UBBlue
-      &.student-heading .arrow
+      &.student__heading .arrow
         border-bottom: 8px solid $BairdPoint
       .view-expand
         display: block
@@ -112,6 +113,7 @@
           cursor: pointer
           top: 31px
           right: 21px
+
     &.is-collapsed
       &.about .view:hover
         background: darken($LetchworthAutumn, 5%)
@@ -139,7 +141,7 @@
             transform: translateY(-100%)
             opacity: 1
 
-#about, #staff, #sas, #finish-in-4, #student-story-2
+#about, #staff, #sas, #finish-in-4, #student-story-1, #student-story-2, #student-story-3
   height: 100%
   width: 100%
   padding: 50px
@@ -159,3 +161,43 @@
 #finish-in-4
   border-color: $UBBlue
   height: 500px
+#student-story-1
+  border-color: $BairdPoint
+  height: 500px
+#student-story-2
+  border-color: $PutnamGray
+  height: 500px
+#student-story-3
+  border-color: $BairdPoint
+  height: 500px
+
+#student-profile-1
+  .student
+    &__photo .view
+      background: $PutnamGray
+    &__heading
+      .view
+        background: $BairdPoint
+        color: $PutnamGray
+      .view-expand
+        margin-left: -33.33%
+
+#student-profile-2
+  .student
+    &__photo .view
+      background: $BairdPoint
+    &__heading
+      .view
+        background: $PutnamGray
+        color: $BairdPoint
+
+#student-profile-3
+  .student
+    &__photo .view
+      background: $PutnamGray
+    &__heading
+      .view
+        background: $BairdPoint
+        color: $PutnamGray
+      .view-expand
+        margin-left: -33.33%

@@ -15,9 +15,10 @@ function ready(fn) {
 }
 
 function resizeBoxes() {
+  var variable = document.getElementById('dynamic-height-for-grid');
+  var viewWidth = variable.offsetWidth;
   var views = document.querySelectorAll('div.view');
   Array.prototype.forEach.call(views, function(view, i) {
-    var viewWidth = view.offsetWidth;
     view.style.height = viewWidth;
   });
 }
@@ -31,7 +32,9 @@ function manageBoxes() {
   Array.prototype.forEach.call(views, function(view, i) {
     view.addEventListener('click', function() {
       if (this.parentNode.classList.contains('is-collapsed')) {
-        bringIntoView(document.getElementById('nav-anchor'), 1000);
+        if (this.parentNode.parentNode.id === 'navigation') {
+          bringIntoView(document.getElementById('nav-anchor'), 1000);
+        }
         var notThese = document.querySelectorAll('div.is-expanded');
         Array.prototype.forEach.call(notThese, function(notThis, i) {
           notThis.classList.remove('is-expanded');

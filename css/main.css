@@ -122,13 +122,14 @@ header {
         margin-left: 0; } }
 
 .main {
-  height: 2000px;
+  height: auto;
   border-top: 5px solid #005bbb;
-  z-index: 1; }
+  z-index: 1;
+  padding: 100px 0; }
   .main .introduction {
     text-align: center; }
   .main #summary {
-    padding: 150px 150px 50px; }
+    padding: 50px 150px 50px; }
   .main #infographics {
     padding: 50px 0 0;
     height: auto;
@@ -171,16 +172,19 @@ header {
   width: 100%;
   margin: 0; }
 
+.grid #navigation .box:nth-of-type(2) .view-expand {
+  margin-left: -100%; }
+
+.grid #navigation .box:nth-of-type(3) .view-expand {
+  margin-left: -200%; }
+
+.grid #navigation .box:nth-of-type(4) .view-expand {
+  margin-left: -300%; }
+
 .grid .box {
   color: white;
   font-size: 2em;
   padding: 0; }
-  .grid .box:nth-of-type(2) .view-expand {
-    margin-left: -100%; }
-  .grid .box:nth-of-type(3) .view-expand {
-    margin-left: -200%; }
-  .grid .box:nth-of-type(4) .view-expand {
-    margin-left: -300%; }
   .grid .box.about .view {
     background: #e56a54; }
   .grid .box.staff .view {
@@ -236,7 +240,7 @@ header {
       height: 0;
       padding-top: 0;
       padding-bottom: 0; }
-    .grid .box.is-expanded .view .arrow {
+    .grid .box.is-expanded .arrow {
       display: block;
       border-bottom: 8px solid black;
       border-left: 8px solid transparent;
@@ -265,7 +269,7 @@ header {
       border-bottom: 8px solid #005bbb; }
     .grid .box.is-expanded.finish-in-4 .close {
       color: #005bbb; }
-    .grid .box.is-expanded.student-heading .arrow {
+    .grid .box.is-expanded.student__heading .arrow {
       border-bottom: 8px solid #e1e1e1; }
     .grid .box.is-expanded .view-expand {
       display: block;
@@ -308,7 +312,7 @@ header {
               transform: translateY(-100%);
       opacity: 1; }
 
-#about, #staff, #sas, #finish-in-4, #student-story-2 {
+#about, #staff, #sas, #finish-in-4, #student-story-1, #student-story-2, #student-story-3 {
   height: 100%;
   width: 100%;
   padding: 50px;
@@ -331,6 +335,45 @@ header {
 #finish-in-4 {
   border-color: #005bbb;
   height: 500px; }
+
+#student-story-1 {
+  border-color: #e1e1e1;
+  height: 500px; }
+
+#student-story-2 {
+  border-color: #666666;
+  height: 500px; }
+
+#student-story-3 {
+  border-color: #e1e1e1;
+  height: 500px; }
+
+#student-profile-1 .student__photo .view {
+  background: #666666; }
+
+#student-profile-1 .student__heading .view {
+  background: #e1e1e1;
+  color: #666666; }
+
+#student-profile-1 .student__heading .view-expand {
+  margin-left: -33.33%; }
+
+#student-profile-2 .student__photo .view {
+  background: #e1e1e1; }
+
+#student-profile-2 .student__heading .view {
+  background: #666666;
+  color: #e1e1e1; }
+
+#student-profile-3 .student__photo .view {
+  background: #666666; }
+
+#student-profile-3 .student__heading .view {
+  background: #e1e1e1;
+  color: #666666; }
+
+#student-profile-3 .student__heading .view-expand {
+  margin-left: -33.33%; }
 
 body {
   margin: 0;
