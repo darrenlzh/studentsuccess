@@ -349,7 +349,7 @@ header {
   height: 500px; }
 
 #student-profile-1 .student__photo .view {
-  background: #666666; }
+  background: black; }
 
 #student-profile-1 .student__heading .view {
   background: #e1e1e1;
@@ -359,14 +359,14 @@ header {
   margin-left: -33.33%; }
 
 #student-profile-2 .student__photo .view {
-  background: #e1e1e1; }
+  background: black; }
 
 #student-profile-2 .student__heading .view {
   background: #666666;
   color: #e1e1e1; }
 
 #student-profile-3 .student__photo .view {
-  background: #666666; }
+  background: black; }
 
 #student-profile-3 .student__heading .view {
   background: #e1e1e1;
