@@ -2,8 +2,10 @@ header
   height: 100vh
   display: flex
   flex-direction: column
+  @media screen and (max-width: $breakSmall)
+    height: 70vh
   .header
-    height: 30vh
+    height: 30%
     display: flex
     flex-direction: column
     justify-content: center
@@ -46,7 +48,7 @@ header
   			width: 70%
   			background: $UBBlue
   .hero
-  	height: 70vh
+  	height: 70%
   	background:
   		image: url(http://www.acsu.buffalo.edu/~zhanhuil/assets/images/student-studying.jpg)
   		size: cover

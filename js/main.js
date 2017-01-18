@@ -32,7 +32,7 @@ function manageBoxes() {
   Array.prototype.forEach.call(views, function(view, i) {
     view.addEventListener('click', function() {
       if (this.parentNode.classList.contains('is-collapsed')) {
-        if (this.parentNode.parentNode.id === 'navigation') {
+        if (this.parentNode.parentNode.parentNode.parentNode.id === 'navigation') {
           bringIntoView(document.getElementById('nav-anchor'), 1000);
         }
         var notThese = document.querySelectorAll('div.is-expanded');

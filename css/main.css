@@ -33,8 +33,11 @@ header {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
+  @media screen and (max-width: 767px) {
+    header {
+      height: 70vh; } }
   header .header {
-    height: 30vh;
+    height: 30%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -84,7 +87,7 @@ header {
         width: 70%;
         background: #005bbb; }
   header .hero {
-    height: 70vh;
+    height: 70%;
     background-image: url(http://www.acsu.buffalo.edu/~zhanhuil/assets/images/student-studying.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -126,10 +129,16 @@ header {
   border-top: 5px solid #005bbb;
   z-index: 1;
   padding: 100px 0; }
+  @media screen and (max-width: 767px) {
+    .main {
+      padding: 0 0 50px; } }
   .main .introduction {
     text-align: center; }
   .main #summary {
     padding: 50px 150px 50px; }
+    @media screen and (max-width: 767px) {
+      .main #summary {
+        padding: 50px 50px; } }
   .main #infographics {
     padding: 50px 0 0;
     height: auto;
@@ -172,14 +181,23 @@ header {
   width: 100%;
   margin: 0; }
 
-.grid #navigation .box:nth-of-type(2) .view-expand {
+.grid #navigation .first-half, .grid #navigation .second-half {
+  padding: 0; }
+
+.grid #navigation .first-half .row .box:nth-of-type(2) .view-expand {
   margin-left: -100%; }
 
-.grid #navigation .box:nth-of-type(3) .view-expand {
+.grid #navigation .second-half .row .box:nth-of-type(1) .view-expand {
   margin-left: -200%; }
+  @media screen and (max-width: 767px) {
+    .grid #navigation .second-half .row .box:nth-of-type(1) .view-expand {
+      margin-left: 0; } }
 
-.grid #navigation .box:nth-of-type(4) .view-expand {
+.grid #navigation .second-half .row .box:nth-of-type(2) .view-expand {
   margin-left: -300%; }
+  @media screen and (max-width: 767px) {
+    .grid #navigation .second-half .row .box:nth-of-type(2) .view-expand {
+      margin-left: -100%; } }
 
 .grid .box {
   color: white;
@@ -275,7 +293,7 @@ header {
       display: block;
       position: relative;
       z-index: 1;
-      max-height: 550px; }
+      max-height: 100%; }
     .grid .box.is-expanded .close {
       position: absolute;
       top: 30px;
@@ -293,12 +311,8 @@ header {
     background: #ffc013; }
     .grid .box.is-collapsed.staff .view:hover span {
       font-size: .7em; }
-  .grid .box.is-collapsed.sas {
-    font-size: 1.7em; }
-    .grid .box.is-collapsed.sas .view:hover {
-      background: #00b8a3; }
-      .grid .box.is-collapsed.sas .view:hover .view__inner--hovered {
-        font-size: .6em; }
+  .grid .box.is-collapsed.sas .view:hover {
+    background: #00b8a3; }
   .grid .box.is-collapsed.finish-in-4 .view:hover {
     background: #004fa2; }
   .grid .box.is-collapsed .view:hover {
@@ -322,7 +336,7 @@ header {
 
 #about {
   border-color: #e56a54;
-  height: 500px; }
+  height: auto; }
 
 #staff {
   border-color: #ffc72c;
@@ -330,11 +344,11 @@ header {
 
 #sas {
   border-color: #00c7b1;
-  height: 500px; }
+  height: 400px; }
 
 #finish-in-4 {
   border-color: #005bbb;
-  height: 500px; }
+  height: 800px; }
 
 #student-story-1 {
   border-color: #e1e1e1;
@@ -364,6 +378,9 @@ header {
 #student-profile-2 .student__heading .view {
   background: #666666;
   color: #e1e1e1; }
+
+#student-profile-2 .student__heading.is-expanded .arrow {
+  border-bottom: 8px solid #666666; }
 
 #student-profile-3 .student__photo .view {
   background: black; }

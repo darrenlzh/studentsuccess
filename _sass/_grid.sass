@@ -2,13 +2,22 @@
   .row
     width: 100%
     margin: 0
-  #navigation .box
-    &:nth-of-type(2) .view-expand
-      margin-left: -100%
-    &:nth-of-type(3) .view-expand
-      margin-left: -200%
-    &:nth-of-type(4) .view-expand
-      margin-left: -300%
+  #navigation
+    .first-half, .second-half
+      padding: 0
+    .first-half .row .box
+      &:nth-of-type(2) .view-expand
+        margin-left: -100%
+    .second-half .row .box
+      &:nth-of-type(1) .view-expand
+        margin-left: -200%
+        @media screen and (max-width: $breakSmall)
+          margin-left: 0
+      &:nth-of-type(2) .view-expand
+        margin-left: -300%
+        @media screen and (max-width: $breakSmall)
+          margin-left: -100%
+
   .box
     color: white
     font-size: 2em
@@ -101,7 +110,7 @@
         display: block
         position: relative
         z-index: 1
-        max-height: 550px
+        max-height: 100%
       .close
         position: absolute
         top: 30px
@@ -121,12 +130,8 @@
         background: darken($SolarStrand, 5%)
         span
           font-size: .7em
-      &.sas
-        font-size: 1.7em
-        .view:hover
-          background: darken($LakeLaSalle, 3%)
-          .view__inner--hovered
-            font-size: .6em
+      &.sas .view:hover
+        background: darken($LakeLaSalle, 3%)
       &.finish-in-4 .view:hover
         background: darken($UBBlue, 5%)
       .view-expand .close
@@ -151,16 +156,16 @@
 
 #about
   border-color: $LetchworthAutumn
-  height: 500px
+  height: auto
 #staff
   border-color: $SolarStrand
   height: 500px
 #sas
   border-color: $LakeLaSalle
-  height: 500px
+  height: 400px
 #finish-in-4
   border-color: $UBBlue
-  height: 500px
+  height: 800px
 #student-story-1
   border-color: $BairdPoint
   height: 500px
@@ -190,6 +195,8 @@
       .view
         background: $PutnamGray
         color: $BairdPoint
+      &.is-expanded .arrow
+        border-bottom: 8px solid $PutnamGray
 
 #student-profile-3
   .student

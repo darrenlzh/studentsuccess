@@ -20,10 +20,14 @@
     #nav-anchor
     .container.grid
       .row#navigation
-        include ../_includes/grid-about.pug
-        include ../_includes/grid-staff.pug
-        include ../_includes/grid-sas.pug
-        include ../_includes/grid-finish.pug
+        .col-md-6.col-sm-6.col-xs-12.first-half
+          .row
+            include ../_includes/grid-nav-1.pug
+            include ../_includes/grid-nav-2.pug
+        .col-md-6.col-sm-6.col-xs-12.second-half
+          .row
+            include ../_includes/grid-nav-3.pug
+            include ../_includes/grid-nav-4.pug
       .row.student#student-profile-1
         include ../_includes/grid-student-story-1.pug
       .row.student#student-profile-2
