@@ -278,12 +278,10 @@ header {
       border-bottom: 8px solid #ffc72c; }
     .grid .box.is-expanded.staff .close {
       color: #ffc72c; }
-    .grid .box.is-expanded.sas {
-      font-size: 1.7em; }
-      .grid .box.is-expanded.sas .arrow {
-        border-bottom: 8px solid #00c7b1; }
-      .grid .box.is-expanded.sas .close {
-        color: #00c7b1; }
+    .grid .box.is-expanded.sas .arrow {
+      border-bottom: 8px solid #00c7b1; }
+    .grid .box.is-expanded.sas .close {
+      color: #00c7b1; }
     .grid .box.is-expanded.finish-in-4 .arrow {
       border-bottom: 8px solid #005bbb; }
     .grid .box.is-expanded.finish-in-4 .close {
