@@ -50,16 +50,18 @@ header
   .hero
   	height: 70%
   	background:
-  		image: url(http://www.acsu.buffalo.edu/~zhanhuil/assets/images/student-studying.jpg)
+  		image: url(../img/student-studying.jpg)
   		size: cover
   		attachment: fixed
   		repeat: no-repeat
-  		position: center 0
-  	filter: blur(5px)
+  		position: center bottom
+  .hero
+    @media screen and (max-width: $breakSmall)
+      background-position: 40% -160px
   .tagline
     width: 90%
     position: absolute
-    top: 45%
+    top: 40%
     display: flex
     flex-direction: row
     justify-content: start
