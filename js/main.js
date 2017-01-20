@@ -4,6 +4,10 @@ ready(function() {
   window.addEventListener('resize', function() {
     resizeBoxes();
   });
+  window.addEventListener('scroll', function() {
+    headerParallax();
+    enterRotate();
+  });
 });
 
 function ready(fn) {
@@ -22,10 +26,6 @@ function resizeBoxes() {
     view.style.height = viewWidth;
   });
 }
-
-// function headerParallax() {
-//   var
-// }
 
 function manageBoxes() {
   var views = document.querySelectorAll('div.box div.view');
@@ -55,6 +55,31 @@ function manageBoxes() {
       this.parentNode.parentNode.classList.add('is-collapsed');
     });
   });
+}
+
+function headerParallax() {
+  var hero = document.getElementById('hero');
+  var scrollTop = document.body.scrollTop;
+  if (scrollTop > 0) {
+    hero.style.backgroundPosition = 'center ' + -scrollTop/2 + 'px';
+  } else {
+    hero.style.backgroundPosition = 'center 0';
+  }
+}
+
+function enterRotate() {
+  var scrollTop = document.body.scrollTop;
+  var navTop = document.getElementById('navigation').offsetTop;
+  var windowHeight = window.innerHeight;
+  var boxes = document.querySelectorAll('div#navigation div.box');
+  if ( (navTop-scrollTop) < windowHeight) {
+    Array.prototype.forEach.call(boxes, function(box, i) {
+      setTimeout(function(i) {
+        box.classList.add('enter-rotate');
+        console.log('added');
+      }, 150 * (i+1));
+    });
+  }
 }
 
 window.bringIntoView_started = 0;

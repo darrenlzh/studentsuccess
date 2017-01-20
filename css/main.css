@@ -86,15 +86,15 @@ header {
       header .color-accent div:nth-child(4) {
         width: 70%;
         background: #005bbb; }
-  header .hero {
+  header #hero {
     height: 70%;
     background-image: url(../img/student-studying.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center bottom; }
+    background-position: center 0; }
   @media screen and (max-width: 767px) {
-    header .hero {
+    header #hero {
       background-position: 40% -160px; } }
   header .tagline {
     width: 90%;
@@ -125,27 +125,27 @@ header {
         width: 100%;
         margin-left: 0; } }
 
-.main {
+#main {
   height: auto;
   border-top: 5px solid #005bbb;
   z-index: 1;
   padding: 100px 0; }
   @media screen and (max-width: 767px) {
-    .main {
+    #main {
       padding: 0 0 50px; } }
-  .main .introduction {
+  #main .introduction {
     text-align: center; }
-  .main #summary {
+  #main #summary {
     padding: 50px 150px 50px; }
     @media screen and (max-width: 767px) {
-      .main #summary {
+      #main #summary {
         padding: 50px 50px; } }
-  .main #infographics {
+  #main #infographics {
     padding: 50px 0 0;
     height: auto;
     width: 100%;
     margin: 0; }
-    .main #infographics .infographic {
+    #main #infographics .infographic {
       height: 300px;
       display: -ms-flexbox;
       display: flex;
@@ -155,7 +155,7 @@ header {
           justify-content: center;
       -ms-flex-align: center;
           align-items: center; }
-      .main #infographics .infographic__icon {
+      #main #infographics .infographic__icon {
         width: 150px;
         height: 150px;
         border-radius: 50%;
@@ -166,9 +166,9 @@ header {
             justify-content: center;
         -ms-flex-align: center;
             align-items: center; }
-        .main #infographics .infographic__icon img:hover {
+        #main #infographics .infographic__icon img:hover {
           cursor: default; }
-      .main #infographics .infographic__text {
+      #main #infographics .infographic__text {
         color: #666666;
         padding: 50px 20px;
         text-align: center;
@@ -199,6 +199,16 @@ header {
   @media screen and (max-width: 767px) {
     .grid #navigation .second-half .row .box:nth-of-type(2) .view-expand {
       margin-left: -100%; } }
+
+.grid #navigation .box {
+  opacity: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  transition: all 0.7s cubic-bezier(0.81, 0.01, 0.23, 0.99); }
+  .grid #navigation .box.enter-rotate {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    opacity: 1; }
 
 .grid .box {
   color: white;
