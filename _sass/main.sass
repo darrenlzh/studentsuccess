@@ -8,10 +8,50 @@ body
   margin: 0
   padding: 0
   font-family: 'Sofia Pro', sans-serif
+  color: $PutnamGray
 
 img:hover
   cursor: pointer
 
+a
+  cursor: pointer
+  color: $UBBlue
+  text-decoration: underline
+  &:hover
+    color: darken($UBBlue, 10%)
+    text-decoration: none
+
 footer
   background: $BairdPoint
-  height: 500px
+  height: auto
+  padding: 100px 0
+  overflow: hidden
+  // border: 1px solid red
+
+  .footer-wrap
+    // border: 1px solid yellow
+
+  .container
+    // border: 1px solid green
+
+  .row
+    // border: 1px solid blue
+
+  .contact-info
+    // border: 1px solid black
+    .address, .contact
+      margin: 15px 0 0 60px
+    p
+      margin: 0
+      i.material-icons
+        font-size: 16px
+
+  .related-links
+    @media screen and (max-width: $breakMedium)
+      margin: 30px 0 0 60px
+
+  img.unit-lockup
+    width: 350px
+    height: auto
+  p
+    margin: 8px
