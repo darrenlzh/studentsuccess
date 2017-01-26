@@ -386,11 +386,11 @@ header {
 
 #student-story-2 {
   border-color: #666666;
-  height: 500px; }
+  height: auto; }
 
 #student-story-3 {
   border-color: #e1e1e1;
-  height: 500px; }
+  height: auto; }
 
 #student-profile-1 .student__photo .view {
   background: black; }
