@@ -1,5 +1,6 @@
 ready(function() {
   resizeBoxes();
+  fadeIn();
   manageBoxes();
   window.addEventListener('resize', function() {
     resizeBoxes();
@@ -25,6 +26,16 @@ function resizeBoxes() {
   Array.prototype.forEach.call(views, function(view, i) {
     view.style.height = viewWidth;
   });
+}
+
+function fadeIn() {
+  var fades = document.querySelectorAll('div.fade-elem');
+  Array.prototype.forEach.call(fades, function(fade, i) {
+    setTimeout(function(i) {
+      fade.classList.add('fade-in');
+    }, 150 * (i+1));
+  });
+  console.log("HELLO");
 }
 
 function manageBoxes() {
@@ -76,7 +87,6 @@ function enterRotate() {
     Array.prototype.forEach.call(boxes, function(box, i) {
       setTimeout(function(i) {
         box.classList.add('enter-rotate');
-        console.log('added');
       }, 150 * (i+1));
     });
   }

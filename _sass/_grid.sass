@@ -30,13 +30,13 @@
     font-size: 2em
     padding: 0
     &.about .view
-      background: $LetchworthAutumn
-    &.staff .view
-      background: $SolarStrand
-    &.sas .view
-      background: $LakeLaSalle
-    &.finish-in-4 .view
       background: $UBBlue
+    &.steps-to-success .view
+      background: $LetchworthAutumn
+    &.early-alert .view
+      background: $SolarStrand
+    &.finish-in-4 .view
+      background: $LakeLaSalle
     .view
       display: block
       overflow: hidden
@@ -92,24 +92,24 @@
         position: absolute
       &.about
         .arrow
+          border-bottom: 8px solid $UBBlue
+        .close
+          color: $UBBlue
+      &.steps-to-success
+        .arrow
           border-bottom: 8px solid $LetchworthAutumn
         .close
           color: $LetchworthAutumn
-      &.staff
+      &.early-alert
         .arrow
           border-bottom: 8px solid $SolarStrand
         .close
           color: $SolarStrand
-      &.sas
+      &.finish-in-4
         .arrow
           border-bottom: 8px solid $LakeLaSalle
         .close
           color: $LakeLaSalle
-      &.finish-in-4
-        .arrow
-          border-bottom: 8px solid $UBBlue
-        .close
-          color: $UBBlue
       &.student__heading .arrow
         border-bottom: 8px solid $BairdPoint
       .view-expand
@@ -131,15 +131,15 @@
 
     &.is-collapsed
       &.about .view:hover
-        background: darken($LetchworthAutumn, 5%)
-      &.staff .view:hover
-        background: darken($SolarStrand, 5%)
+        background: darken($UBBlue, 10%)
+      &.steps-to-success .view:hover
+        background: darken($LetchworthAutumn, 10%)
         span
           font-size: .7em
-      &.sas .view:hover
-        background: darken($LakeLaSalle, 3%)
+      &.early-alert .view:hover
+        background: darken($SolarStrand, 15%)
       &.finish-in-4 .view:hover
-        background: darken($UBBlue, 5%)
+        background: darken($LakeLaSalle, 10%)
       .view-expand .close
         // display: none
       .view
@@ -152,7 +152,7 @@
             transform: translateY(-100%)
             opacity: 1
 
-#about, #staff, #sas, #finish-in-4, #student-story-1, #student-story-2, #student-story-3
+#about, #steps-to-success, #early-alert, #finish-in-4, #student-story-1, #student-story-2, #student-story-3
   height: 100%
   width: 100%
   padding: 50px
@@ -161,20 +161,20 @@
   background: white
 
 #about
-  border-color: $LetchworthAutumn
+  border-color: $UBBlue
   height: auto
-#staff
-  border-color: $SolarStrand
+#steps-to-success
+  border-color: $LetchworthAutumn
   height: 500px
-#sas
-  border-color: $LakeLaSalle
+#early-alert
+  border-color: $SolarStrand
   height: 400px
 #finish-in-4
-  border-color: $UBBlue
+  border-color: $LakeLaSalle
   height: 800px
 #student-story-1
   border-color: $BairdPoint
-  height: 500px
+  height: auto
 #student-story-2
   border-color: $PutnamGray
   height: 500px

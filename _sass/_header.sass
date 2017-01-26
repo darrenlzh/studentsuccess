@@ -27,6 +27,13 @@ header
         @media screen and (max-width: $siteLogoBreak)
           width: 266.66px
           height: auto
+    .fade-elem
+      transition: all .3s ease-in-out
+      opacity: 0
+      transform: translateX(-100%)
+      &.fade-in
+        opacity: 1
+        transform: translateX(0)
   .color-accent
   	height: 20px
   	border-bottom: 5px solid $UBBlue
@@ -81,3 +88,14 @@ header
       flex-direction: column
       width: 100%
       margin-left: 0
+    &.fade-elem
+      transition: opacity .3s ease-in-out .5s
+      opacity: 0
+      &.fade-in
+        opacity: 1
+
+  .fade-elem
+    transition: opacity .5s ease-in-out
+    opacity: 0
+    &.fade-in
+      opacity: 1
