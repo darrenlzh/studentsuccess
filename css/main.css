@@ -224,7 +224,7 @@ header {
 .grid .box {
   color: white;
   font-size: 2em;
-  padding: 0;
+  padding: 0.2vw;
   opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -301,23 +301,23 @@ header {
       margin: 0 auto;
       position: absolute; }
     .grid .box.is-expanded.about .arrow {
-      border-bottom: 8px solid #005bbb; }
+      border-bottom: 10px solid #005bbb; }
     .grid .box.is-expanded.about .close {
       color: #005bbb; }
     .grid .box.is-expanded.steps-to-success .arrow {
-      border-bottom: 8px solid #e56a54; }
+      border-bottom: 10px solid #e56a54; }
     .grid .box.is-expanded.steps-to-success .close {
       color: #e56a54; }
     .grid .box.is-expanded.early-alert .arrow {
-      border-bottom: 8px solid #ffc72c; }
+      border-bottom: 10px solid #ffc72c; }
     .grid .box.is-expanded.early-alert .close {
       color: #ffc72c; }
     .grid .box.is-expanded.finish-in-4 .arrow {
-      border-bottom: 8px solid #00c7b1; }
+      border-bottom: 10px solid #00c7b1; }
     .grid .box.is-expanded.finish-in-4 .close {
       color: #00c7b1; }
     .grid .box.is-expanded.student__heading .arrow {
-      border-bottom: 8px solid #e1e1e1; }
+      border-bottom: 10px solid #e1e1e1; }
     .grid .box.is-expanded .view-expand {
       display: block;
       position: relative;
@@ -364,7 +364,35 @@ header {
   background: white; }
 
 #about {
-  border-color: #005bbb; }
+  border-color: #005bbb;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  @media screen and (max-width: 991px) {
+    #about {
+      -ms-flex-direction: column;
+          flex-direction: column; } }
+  #about .sidebar {
+    width: 15%; }
+    #about .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0 0 0; }
+      #about .sidebar ul li a {
+        display: block;
+        padding: 10px 0 10px 10px;
+        text-decoration: none; }
+        #about .sidebar ul li a:hover {
+          background: #004288;
+          color: white; }
+        #about .sidebar ul li a.active {
+          background: #005bbb;
+          color: white; }
+  #about .content {
+    width: 80%; }
 
 #steps-to-success {
   border-color: #e56a54; }
@@ -413,6 +441,13 @@ header {
 
 #student-profile-3 .student__heading .view-expand {
   margin-left: -33.33%; }
+
+.section-heading {
+  color: #666666; }
+  .section-heading .view {
+    height: 100%; }
+    .section-heading .view__inner {
+      height: inherit; }
 
 body {
   margin: 0;

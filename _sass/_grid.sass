@@ -21,7 +21,7 @@
   .box
     color: white
     font-size: 2em
-    padding: 0
+    padding: 0.2vw
     opacity: 0
     transform: scale(0)
     transition: transform .7s cubic-bezier(.81,.01,.23,.99)
@@ -91,26 +91,26 @@
         position: absolute
       &.about
         .arrow
-          border-bottom: 8px solid $UBBlue
+          border-bottom: 10px solid $UBBlue
         .close
           color: $UBBlue
       &.steps-to-success
         .arrow
-          border-bottom: 8px solid $LetchworthAutumn
+          border-bottom: 10px solid $LetchworthAutumn
         .close
           color: $LetchworthAutumn
       &.early-alert
         .arrow
-          border-bottom: 8px solid $SolarStrand
+          border-bottom: 10px solid $SolarStrand
         .close
           color: $SolarStrand
       &.finish-in-4
         .arrow
-          border-bottom: 8px solid $LakeLaSalle
+          border-bottom: 10px solid $LakeLaSalle
         .close
           color: $LakeLaSalle
       &.student__heading .arrow
-        border-bottom: 8px solid $BairdPoint
+        border-bottom: 10px solid $BairdPoint
       .view-expand
         display: block
         position: relative
@@ -161,6 +161,30 @@
 
 #about
   border-color: $UBBlue
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  @media screen and (max-width: $breakMedium)
+    flex-direction: column
+  .sidebar
+    width: 15%
+    ul
+      list-style: none
+      padding: 0
+      margin: 30px 0 0 0
+      li a
+        display: block
+        padding: 10px 0 10px 10px
+        text-decoration: none
+        &:hover
+          background: darken($UBBlue, 10%)
+          color: white
+        &.active
+          background: $UBBlue
+          color: white
+
+  .content
+    width: 80%
 #steps-to-success
   border-color: $LetchworthAutumn
 #early-alert
@@ -206,3 +230,11 @@
         color: $PutnamGray
       .view-expand
         margin-left: -33.33%
+
+.section-heading
+  color: $PutnamGray
+  .view
+    height: 100%
+
+    &__inner
+      height: inherit
