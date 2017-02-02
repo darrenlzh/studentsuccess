@@ -7,22 +7,21 @@
       padding: 0
     .first-half .row .box
       &:nth-of-type(2) .view-expand
-        margin-left: -102%
+        margin-left: -102.6%
     .second-half .row .box
       &:nth-of-type(1) .view-expand
-        margin-left: -203.8%
+        margin-left: -205.5%
         @media screen and (max-width: $breakSmall)
           margin-left: 0
       &:nth-of-type(2) .view-expand
-        margin-left: -305.5%
+        margin-left: -308.5%
         @media screen and (max-width: $breakSmall)
-          margin-left: -100%
+          margin-left: -102.6%
 
   .box
-    box-sizing: border-box
     color: white
     font-size: 2em
-    padding: 0.2vw
+    padding: 4px
     opacity: 0
     transform: scale(0)
     transition: transform .7s cubic-bezier(.81,.01,.23,.99)
@@ -57,12 +56,12 @@
       box-sizing: border-box
       overflow: hidden
       max-height: 0
-      width: 400%
+      width: 409%
       color: $PutnamGray
       transition: max-height .3s ease
       font-size: 15px
       @media screen and (max-width: $breakSmall)
-        width: 200%
+        width: 202.5%
       &.three-cols
         width: 133.4%
       .close

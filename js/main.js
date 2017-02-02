@@ -29,11 +29,11 @@ function resizeBoxes() {
   Array.prototype.forEach.call(views, function(view, i) {
     view.style.height = viewWidth;
   });
-  Array.prototype.forEach.call(viewExpands, function(viewExpand, i) {
-    viewExpand.style.width = ((boxWidth * 4) - 4);
-    // Adjusting .view-expand width
-  });
-  console.log(boxWidth);
+  // Array.prototype.forEach.call(viewExpands, function(viewExpand, i) {
+  //   viewExpand.style.width = ((boxWidth * 4) - 4);
+  //   // Adjusting .view-expand width
+  // });
+  // console.log(boxWidth);
 }
 
 function fadeIn() {
