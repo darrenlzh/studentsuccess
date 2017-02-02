@@ -24,16 +24,16 @@ function resizeBoxes() {
   var variable2 = document.getElementById('dynamic-width-for-expand');
   var viewWidth = variable.offsetWidth;
   var boxWidth = variable2.offsetWidth;
-  var boxPadding = variable2.style.paddingTop;
   var views = document.querySelectorAll('div.view');
   var viewExpands = document.querySelectorAll('div.view-expand');
   Array.prototype.forEach.call(views, function(view, i) {
     view.style.height = viewWidth;
   });
   Array.prototype.forEach.call(viewExpands, function(viewExpand, i) {
-    viewExpand.style.width = (boxWidth - boxPadding) * 4;
+    viewExpand.style.width = ((boxWidth * 4) - 4);
+    // Adjusting .view-expand width
   });
-  console.log(boxPadding);
+  console.log(boxWidth);
 }
 
 function fadeIn() {
