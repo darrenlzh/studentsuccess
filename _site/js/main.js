@@ -88,16 +88,27 @@ function headerParallax() {
 function enterRotate() {
   var scrollTop = document.body.scrollTop;
   var navTop = document.getElementById('navigation').offsetTop;
+  var shTop = document.getElementById('section-heading').offsetTop;
   var sp1Top = document.getElementById('student-profile-1').offsetTop;
   var sp2Top = document.getElementById('student-profile-2').offsetTop;
   var sp3Top = document.getElementById('student-profile-3').offsetTop;
+  var seTop = document.getElementById('section-ending').offsetTop;
   var windowHeight = window.innerHeight;
   var navBoxes = document.querySelectorAll('div#navigation div.box');
+  var shBoxes = document.querySelectorAll('div#section-heading div.box');
   var sp1Boxes = document.querySelectorAll('div#student-profile-1 div.box');
   var sp2Boxes = document.querySelectorAll('div#student-profile-2 div.box');
   var sp3Boxes = document.querySelectorAll('div#student-profile-3 div.box');
+  var seBoxes = document.querySelectorAll('div#section-ending div.box');
   if ( (navTop-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(navBoxes, function(box, i) {
+      setTimeout(function(i) {
+        box.classList.add('enter-rotate');
+      }, 150 * (i+1));
+    });
+  }
+  if ( (shTop-scrollTop) < windowHeight) {
+    Array.prototype.forEach.call(shBoxes, function(box, i) {
       setTimeout(function(i) {
         box.classList.add('enter-rotate');
       }, 150 * (i+1));
@@ -119,6 +130,13 @@ function enterRotate() {
   }
   if ( (sp3Top-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(sp3Boxes, function(box, i) {
+      setTimeout(function(i) {
+        box.classList.add('enter-rotate');
+      }, 150 * (i+1));
+    });
+  }
+  if ( (seTop-scrollTop) < windowHeight) {
+    Array.prototype.forEach.call(seBoxes, function(box, i) {
       setTimeout(function(i) {
         box.classList.add('enter-rotate');
       }, 150 * (i+1));

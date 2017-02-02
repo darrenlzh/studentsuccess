@@ -365,6 +365,10 @@ header {
               transform: translateY(-100%);
       opacity: 1; }
 
+.grid .student img {
+  width: 100%;
+  height: auto; }
+
 #about, #steps-to-success, #early-alert, #finish-in-4, #student-story-1, #student-story-2, #student-story-3 {
   height: auto;
   width: 100%;
@@ -401,6 +405,8 @@ header {
         #about .sidebar ul li a.active {
           background: #005bbb;
           color: white; }
+      #about .sidebar ul i {
+        font-size: 0.7em; }
   #about .content {
     width: 81%; }
 
@@ -452,12 +458,43 @@ header {
 #student-profile-3 .student__heading .view-expand {
   margin-left: -33.33%; }
 
-.section-heading {
-  color: #666666; }
-  .section-heading .view {
-    height: 100%; }
-    .section-heading .view__inner {
-      height: inherit; }
+#section-heading .box {
+  color: #666666;
+  text-align: center; }
+
+#section-heading .inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 100px 50px; }
+  #section-heading .inner span {
+    font-family: 'Sofia Pro Medium', sans-serif;
+    color: #005bbb; }
+  #section-heading .inner__inner {
+    height: auto; }
+
+#section-ending .box {
+  font-family: 'Sofia Pro Medium', sans-serif;
+  color: #005bbb;
+  text-align: center; }
+
+#section-ending .inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 100px 50px; }
+  #section-ending .inner__inner {
+    height: auto; }
 
 body {
   margin: 0;
@@ -467,6 +504,9 @@ body {
 
 img:hover {
   cursor: pointer; }
+
+img.nohover {
+  cursor: default; }
 
 a {
   cursor: pointer;

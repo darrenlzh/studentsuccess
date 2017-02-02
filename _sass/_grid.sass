@@ -162,6 +162,11 @@
             transform: translateY(-100%)
             opacity: 1
 
+  .student
+    img
+      width: 100%
+      height: auto
+
 #about, #steps-to-success, #early-alert, #finish-in-4, #student-story-1, #student-story-2, #student-story-3
   height: auto
   width: 100%
@@ -193,6 +198,9 @@
         &.active
           background: $UBBlue
           color: white
+      i
+        font-size: 0.7em
+
 
   .content
     width: 81%
@@ -243,10 +251,32 @@
       .view-expand
         margin-left: -33.33%
 
-.section-heading
-  color: $PutnamGray
-  .view
-    height: 100%
-
+#section-heading
+  .box
+    color: $PutnamGray
+    text-align: center
+  .inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 100px 50px
+    span
+      font-family: 'Sofia Pro Medium', sans-serif
+      color: $UBBlue
     &__inner
-      height: inherit
+      height: auto
+
+#section-ending
+  .box
+    font-family: 'Sofia Pro Medium', sans-serif
+    color: $UBBlue
+    text-align: center
+  .inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 100px 50px
+    &__inner
+      height: auto
