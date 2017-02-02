@@ -21,11 +21,19 @@ function ready(fn) {
 
 function resizeBoxes() {
   var variable = document.getElementById('dynamic-height-for-grid');
+  var variable2 = document.getElementById('dynamic-width-for-expand');
   var viewWidth = variable.offsetWidth;
+  var boxWidth = variable2.offsetWidth;
+  var boxPadding = variable2.style.paddingTop;
   var views = document.querySelectorAll('div.view');
+  var viewExpands = document.querySelectorAll('div.view-expand');
   Array.prototype.forEach.call(views, function(view, i) {
     view.style.height = viewWidth;
   });
+  Array.prototype.forEach.call(viewExpands, function(viewExpand, i) {
+    viewExpand.style.width = (boxWidth - boxPadding) * 4;
+  });
+  console.log(boxPadding);
 }
 
 function fadeIn() {
@@ -35,7 +43,6 @@ function fadeIn() {
       fade.classList.add('fade-in');
     }, 150 * (i+1));
   });
-  console.log("HELLO");
 }
 
 function manageBoxes() {
@@ -116,7 +123,6 @@ function enterRotate() {
         box.classList.add('enter-rotate');
       }, 150 * (i+1));
     });
-    console.log("HELLO");
   }
 }
 

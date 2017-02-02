@@ -94,23 +94,34 @@
           border-bottom: 10px solid $UBBlue
         .close
           color: $UBBlue
+          &:hover
+            background: $UBBlue
       &.steps-to-success
         .arrow
           border-bottom: 10px solid $LetchworthAutumn
         .close
           color: $LetchworthAutumn
+          &:hover
+            background: $LetchworthAutumn
       &.early-alert
         .arrow
           border-bottom: 10px solid $SolarStrand
         .close
           color: $SolarStrand
+          &:hover
+            background: $SolarStrand
       &.finish-in-4
         .arrow
           border-bottom: 10px solid $LakeLaSalle
         .close
           color: $LakeLaSalle
-      &.student__heading .arrow
-        border-bottom: 10px solid $BairdPoint
+          &:hover
+            background: $LakeLaSalle
+      &.student__heading
+        .arrow
+          border-bottom: 10px solid $BairdPoint
+        .close:hover
+          background: $PutnamGray
       .view-expand
         display: block
         position: relative
@@ -125,8 +136,7 @@
         display: block
         &:hover
           cursor: pointer
-          top: 31px
-          right: 21px
+          color: white
 
     &.is-collapsed
       &.about .view:hover
@@ -184,7 +194,8 @@
           color: white
 
   .content
-    width: 80%
+    width: 81%
+
 #steps-to-success
   border-color: $LetchworthAutumn
 #early-alert

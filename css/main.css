@@ -304,20 +304,30 @@ header {
       border-bottom: 10px solid #005bbb; }
     .grid .box.is-expanded.about .close {
       color: #005bbb; }
+      .grid .box.is-expanded.about .close:hover {
+        background: #005bbb; }
     .grid .box.is-expanded.steps-to-success .arrow {
       border-bottom: 10px solid #e56a54; }
     .grid .box.is-expanded.steps-to-success .close {
       color: #e56a54; }
+      .grid .box.is-expanded.steps-to-success .close:hover {
+        background: #e56a54; }
     .grid .box.is-expanded.early-alert .arrow {
       border-bottom: 10px solid #ffc72c; }
     .grid .box.is-expanded.early-alert .close {
       color: #ffc72c; }
+      .grid .box.is-expanded.early-alert .close:hover {
+        background: #ffc72c; }
     .grid .box.is-expanded.finish-in-4 .arrow {
       border-bottom: 10px solid #00c7b1; }
     .grid .box.is-expanded.finish-in-4 .close {
       color: #00c7b1; }
+      .grid .box.is-expanded.finish-in-4 .close:hover {
+        background: #00c7b1; }
     .grid .box.is-expanded.student__heading .arrow {
       border-bottom: 10px solid #e1e1e1; }
+    .grid .box.is-expanded.student__heading .close:hover {
+      background: #666666; }
     .grid .box.is-expanded .view-expand {
       display: block;
       position: relative;
@@ -332,8 +342,7 @@ header {
       display: block; }
       .grid .box.is-expanded .close:hover {
         cursor: pointer;
-        top: 31px;
-        right: 21px; }
+        color: white; }
   .grid .box.is-collapsed.about .view:hover {
     background: #004288; }
   .grid .box.is-collapsed.steps-to-success .view:hover {
@@ -392,7 +401,7 @@ header {
           background: #005bbb;
           color: white; }
   #about .content {
-    width: 80%; }
+    width: 81%; }
 
 #steps-to-success {
   border-color: #e56a54; }
