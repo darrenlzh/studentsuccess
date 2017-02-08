@@ -428,9 +428,6 @@ header {
 #student-story-3 {
   border-color: #e1e1e1; }
 
-#student-profile-1 .student__photo .view {
-  background: black; }
-
 #student-profile-1 .student__heading .view {
   background: #e1e1e1;
   color: #666666; }
@@ -438,18 +435,12 @@ header {
 #student-profile-1 .student__heading .view-expand {
   margin-left: -33.33%; }
 
-#student-profile-2 .student__photo .view {
-  background: black; }
-
 #student-profile-2 .student__heading .view {
   background: #666666;
   color: #e1e1e1; }
 
 #student-profile-2 .student__heading.is-expanded .arrow {
-  border-bottom: 8px solid #666666; }
-
-#student-profile-3 .student__photo .view {
-  background: black; }
+  border-bottom: 10px solid #666666; }
 
 #student-profile-3 .student__heading .view {
   background: #e1e1e1;
