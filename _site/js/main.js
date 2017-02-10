@@ -45,6 +45,20 @@ function fadeIn() {
   });
 }
 
+function changeTab(elem, tabName) {
+  var i, j;
+  var navList = document.querySelectorAll('#about div.sidebar ul li');
+  var contentInner = document.getElementsByClassName('content__inner');
+  for (i=0; i<contentInner.length; i++) {
+    contentInner[i].style.display = 'none';
+  }
+  document.getElementById(tabName).style.display = 'block';
+  for (j=0; j<navList.length; j++) {
+    navList[j].classList.remove('active');
+  }
+  elem.parentNode.classList.add('active');
+}
+
 function manageBoxes() {
   var views = document.querySelectorAll('div.box div.view');
   Array.prototype.forEach.call(views, function(view, i) {
@@ -52,6 +66,12 @@ function manageBoxes() {
       if (this.parentNode.classList.contains('is-collapsed')) {
         if (this.parentNode.parentNode.parentNode.parentNode.id === 'navigation') {
           bringIntoView(document.getElementById('nav-anchor'), 1000);
+        } else if (this.parentNode.parentNode.id === 'student-profile-1') {
+          bringIntoView(document.getElementById('student-profile-1'), 1000);
+        } else if (this.parentNode.parentNode.id === 'student-profile-2') {
+          bringIntoView(document.getElementById('student-profile-2'), 1000);
+        } else if (this.parentNode.parentNode.id === 'student-profile-3') {
+          bringIntoView(document.getElementById('student-profile-3'), 1000);
         }
         var notThese = document.querySelectorAll('div.is-expanded');
         Array.prototype.forEach.call(notThese, function(notThis, i) {

@@ -150,8 +150,6 @@
         background: darken($SolarStrand, 15%)
       &.finish-in-4 .view:hover
         background: darken($LakeLaSalle, 10%)
-      .view-expand .close
-        // display: none
       .view
         &:hover
           cursor: pointer
@@ -188,22 +186,43 @@
       list-style: none
       padding: 0
       margin: 30px 0 0 0
-      li a
-        display: block
-        padding: 10px 0 10px 10px
-        text-decoration: none
+      @media screen and (max-width: $breakMedium)
+        display: flex
+        flex-direction: row
+        margin-top: 20px
+        width: 100%
+      @media screen and (max-width: 482px)
+        display: flex
+        flex-direction: column
+        margin-top: 40px
+      li
+        a
+          display: block
+          padding: 10px 0 10px 10px
+          text-decoration: none
         &:hover
           background: darken($UBBlue, 10%)
-          color: white
+          a
+            color: white
         &.active
           background: $UBBlue
-          color: white
+          a
+            color: white
+        @media screen and (max-width: $breakMedium)
+          padding: 10px 20px
       i
         font-size: 0.7em
-
+    @media screen and (max-width: $breakMedium)
+      width: 100%
 
   .content
     width: 81%
+    &__inner
+      animation: fadeContent .3s ease-in
+      &:nth-of-type(2)
+        display: none
+    @media screen and (max-width: $breakMedium)
+      width: 100%
 
 #steps-to-success
   border-color: $LetchworthAutumn
@@ -235,6 +254,9 @@
         color: $BairdPoint
       &.is-expanded .arrow
         border-bottom: 10px solid $PutnamGray
+  .quote
+    background: $BairdPoint
+    color: $PutnamGray
 
 #student-profile-3
   .student
@@ -274,3 +296,21 @@
     padding: 100px 50px
     &__inner
       height: auto
+
+.quote
+  font-family: 'More Pro Book', serif
+  font-size: 1.7em
+  width: 50%
+  float: right
+  padding: 50px
+  margin: 0 0 35px 35px
+  color: white
+  background: $PutnamGray
+
+@keyframes fadeContent
+  0%
+    opacity: 0
+  50%
+    opacity: 0.5
+  100%
+    opacity: 1

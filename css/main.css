@@ -395,20 +395,51 @@ header {
       list-style: none;
       padding: 0;
       margin: 30px 0 0 0; }
+      @media screen and (max-width: 991px) {
+        #about .sidebar ul {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: row;
+              flex-direction: row;
+          margin-top: 20px;
+          width: 100%; } }
+      @media screen and (max-width: 482px) {
+        #about .sidebar ul {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+              flex-direction: column;
+          margin-top: 40px; } }
       #about .sidebar ul li a {
         display: block;
         padding: 10px 0 10px 10px;
         text-decoration: none; }
-        #about .sidebar ul li a:hover {
-          background: #004288;
+      #about .sidebar ul li:hover {
+        background: #004288; }
+        #about .sidebar ul li:hover a {
           color: white; }
-        #about .sidebar ul li a.active {
-          background: #005bbb;
+      #about .sidebar ul li.active {
+        background: #005bbb; }
+        #about .sidebar ul li.active a {
           color: white; }
+      @media screen and (max-width: 991px) {
+        #about .sidebar ul li {
+          padding: 10px 20px; } }
       #about .sidebar ul i {
         font-size: 0.7em; }
+    @media screen and (max-width: 991px) {
+      #about .sidebar {
+        width: 100%; } }
   #about .content {
     width: 81%; }
+    #about .content__inner {
+      -webkit-animation: fadeContent .3s ease-in;
+              animation: fadeContent .3s ease-in; }
+      #about .content__inner:nth-of-type(2) {
+        display: none; }
+    @media screen and (max-width: 991px) {
+      #about .content {
+        width: 100%; } }
 
 #steps-to-success {
   border-color: #e56a54; }
@@ -441,6 +472,10 @@ header {
 
 #student-profile-2 .student__heading.is-expanded .arrow {
   border-bottom: 10px solid #666666; }
+
+#student-profile-2 .quote {
+  background: #e1e1e1;
+  color: #666666; }
 
 #student-profile-3 .student__heading .view {
   background: #e1e1e1;
@@ -486,6 +521,32 @@ header {
   padding: 100px 50px; }
   #section-ending .inner__inner {
     height: auto; }
+
+.quote {
+  font-family: 'More Pro Book', serif;
+  font-size: 1.7em;
+  width: 50%;
+  float: right;
+  padding: 50px;
+  margin: 0 0 35px 35px;
+  color: white;
+  background: #666666; }
+
+@-webkit-keyframes fadeContent {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeContent {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
 
 body {
   margin: 0;
