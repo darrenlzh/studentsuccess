@@ -64,15 +64,6 @@ function manageBoxes() {
   Array.prototype.forEach.call(views, function(view, i) {
     view.addEventListener('click', function() {
       if (this.parentNode.classList.contains('is-collapsed')) {
-        if (this.parentNode.parentNode.parentNode.parentNode.id === 'navigation') {
-          bringIntoView(document.getElementById('nav-anchor'), 1000);
-        } else if (this.parentNode.parentNode.id === 'student-profile-1') {
-          bringIntoView(document.getElementById('student-profile-1'), 1000);
-        } else if (this.parentNode.parentNode.id === 'student-profile-2') {
-          bringIntoView(document.getElementById('student-profile-2'), 1000);
-        } else if (this.parentNode.parentNode.id === 'student-profile-3') {
-          bringIntoView(document.getElementById('student-profile-3'), 1000);
-        }
         var notThese = document.querySelectorAll('div.is-expanded');
         Array.prototype.forEach.call(notThese, function(notThis, i) {
           notThis.classList.remove('is-expanded');
@@ -80,6 +71,10 @@ function manageBoxes() {
         });
         this.parentNode.classList.remove('is-collapsed');
         this.parentNode.classList.add('is-expanded');
+        var that = this;
+        setTimeout(function() {
+          bringIntoView(that, 1000);
+        }, 250);
       } else {
         this.parentNode.classList.remove('is-expanded');
         this.parentNode.classList.add('is-collapsed');
@@ -91,6 +86,27 @@ function manageBoxes() {
     close.addEventListener('click', function() {
       this.parentNode.parentNode.classList.remove('is-expanded');
       this.parentNode.parentNode.classList.add('is-collapsed');
+    });
+  });
+  var staffs = document.querySelectorAll('#about div.staff div.staff-header');
+  Array.prototype.forEach.call(staffs, function(staff, i) {
+    staff.addEventListener('click', function() {
+      if (this.parentNode.classList.contains('is-collapsed')) {
+        var notThese = document.querySelectorAll('div.staff.is-expanded');
+        Array.prototype.forEach.call(notThese, function(notThis, i) {
+          notThis.classList.remove('is-expanded');
+          notThis.classList.add('is-collapsed');
+        });
+        this.parentNode.classList.remove('is-collapsed');
+        this.parentNode.classList.add('is-expanded');
+        var that = this;
+        setTimeout(function() {
+          bringIntoView(that, 1000);
+        }, 250);
+      } else {
+        this.parentNode.classList.remove('is-expanded');
+        this.parentNode.classList.add('is-collapsed');
+      }
     });
   });
 }

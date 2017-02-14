@@ -231,13 +231,8 @@ header {
   font-size: 2em;
   padding: 4px;
   opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  transition: -webkit-transform 0.7s cubic-bezier(0.81, 0.01, 0.23, 0.99);
-  transition: transform 0.7s cubic-bezier(0.81, 0.01, 0.23, 0.99); }
+  transition: opacity .7s ease; }
   .grid .box.enter-rotate {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     opacity: 1; }
   .grid .box.about .view {
     background: #005bbb; }
@@ -446,13 +441,51 @@ header {
       #about .content {
         width: 100%; } }
 
-#staff .staff {
-  border-top: 1px solid #666666;
-  border-bottom: 1px solid #666666; }
-  #staff .staff h3 {
-    margin-bottom: 0; }
-  #staff .staff p.staff__title {
-    margin-top: 0; }
+#staff .staff h3 {
+  margin-bottom: 0; }
+
+#staff .staff p.staff__title {
+  margin-top: 0; }
+
+#staff .staff .staff-bio {
+  padding: 0 25px 5px;
+  -webkit-animation: fadeContent .3s ease-in;
+          animation: fadeContent .3s ease-in; }
+
+#staff .staff .staff-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%;
+  padding: 25px; }
+  #staff .staff .staff-header:hover {
+    cursor: pointer;
+    background: #e1e1e1; }
+
+#staff .staff__photo {
+  width: 125px;
+  height: 160px;
+  background: #666666; }
+
+#staff .staff__desc {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding-left: 3em; }
+
+#staff .staff.is-collapsed .staff-bio {
+  height: 0;
+  display: none; }
+
+#staff .staff.is-expanded {
+  background: #e1e1e1;
+  margin: 10px 0; }
+  #staff .staff.is-expanded .staff-bio {
+    height: auto; }
 
 #steps-to-success {
   border-color: #e56a54; }
@@ -601,6 +634,11 @@ footer {
   @media screen and (max-width: 991px) {
     footer .related-links {
       margin: 30px 0 0 60px; } }
+  footer .legal-notice {
+    border-top: 1px solid #666666;
+    text-align: right;
+    padding: 30px 0 0;
+    margin-top: 50px; }
   footer img.unit-lockup {
     width: 350px;
     height: auto; }
