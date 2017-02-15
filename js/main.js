@@ -29,11 +29,12 @@ function resizeBoxes() {
   Array.prototype.forEach.call(views, function(view, i) {
     view.style.height = viewWidth;
   });
-  // Array.prototype.forEach.call(viewExpands, function(viewExpand, i) {
-  //   viewExpand.style.width = ((boxWidth * 4) - 4);
-  //   // Adjusting .view-expand width
-  // });
-  // console.log(boxWidth);
+  var refWidth = document.getElementById('ssbr').offsetWidth;
+  var students = document.querySelectorAll('div.student');
+  Array.prototype.forEach.call(students, function(student, i) {
+    var studentView = student.querySelector('div.student__heading div.view');
+    studentView.style.height = refWidth;
+  });
 }
 
 function fadeIn() {
@@ -139,42 +140,42 @@ function enterRotate() {
   if ( (navTop-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(navBoxes, function(box, i) {
       setTimeout(function(i) {
-        box.classList.add('enter-rotate');
+        box.classList.add('enter');
       }, 150 * (i+1));
     });
   }
   if ( (shTop-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(shBoxes, function(box, i) {
       setTimeout(function(i) {
-        box.classList.add('enter-rotate');
+        box.classList.add('enter');
       }, 150 * (i+1));
     });
   }
   if ( (sp1Top-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(sp1Boxes, function(box, i) {
       setTimeout(function(i) {
-        box.classList.add('enter-rotate');
+        box.classList.add('enter');
       }, 150 * (i+1));
     });
   }
   if ( (sp2Top-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(sp2Boxes, function(box, i) {
       setTimeout(function(i) {
-        box.classList.add('enter-rotate');
+        box.classList.add('enter');
       }, 150 * (i+1));
     });
   }
   if ( (sp3Top-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(sp3Boxes, function(box, i) {
       setTimeout(function(i) {
-        box.classList.add('enter-rotate');
+        box.classList.add('enter');
       }, 150 * (i+1));
     });
   }
   if ( (seTop-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(seBoxes, function(box, i) {
       setTimeout(function(i) {
-        box.classList.add('enter-rotate');
+        box.classList.add('enter');
       }, 150 * (i+1));
     });
   }

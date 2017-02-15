@@ -12,17 +12,17 @@ header
     padding-left: 5%
     &__logo
       margin: 20px 0
-      @media screen and (max-width: $siteLogoBreak)
+      @media screen and (max-width: $breakSmall)
         margin: 10px 0
       img
         width: 250px
         height: auto
-        @media screen and (max-width: $siteLogoBreak)
+        @media screen and (max-width: $breakSmall)
           width: 166.66px
           height: auto
     &__title
       font-family: 'Sofia Pro UltraLight', sans-serif
-      font-size: 2.5rem
+      font-size: 2rem
       // img
       //   width: 400px
       //   height: auto
@@ -32,10 +32,10 @@ header
     .fade-elem
       transition: all .3s ease-in-out
       opacity: 0
-      transform: translateX(-100%)
+      // transform: translateX(-100%)
       &.fade-in
         opacity: 1
-        transform: translateX(0)
+        // transform: translateX(0)
   .color-accent
   	height: 20px
   	border-bottom: 5px solid $UBBlue
@@ -56,6 +56,18 @@ header
   		&:nth-child(4)
   			width: 61%
   			background: $UBBlue
+  .color-accent
+    @media screen and (max-width: $breakSmall)
+      height: 15px
+      div
+        &:nth-child(1)
+          width: 25%
+        &:nth-child(2)
+          width: 25%
+        &:nth-child(3)
+          width: 25%
+        &:nth-child(4)
+          width: 25%
   #hero
   	height: 70%
   	background:
@@ -91,7 +103,7 @@ header
       width: 100%
       margin-left: 0
     &.fade-elem
-      transition: opacity .3s ease-in-out .5s
+      transition: opacity .3s ease-in-out .2s
       opacity: 0
       &.fade-in
         opacity: 1
