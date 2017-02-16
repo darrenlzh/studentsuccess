@@ -101,9 +101,9 @@ function manageBoxes() {
         this.parentNode.classList.remove('is-collapsed');
         this.parentNode.classList.add('is-expanded');
         var that = this;
-        setTimeout(function() {
-          bringIntoView(that, 1000);
-        }, 250);
+        // setTimeout(function() {
+        //   bringIntoView(that, 1000);
+        // }, 250);
       } else {
         this.parentNode.classList.remove('is-expanded');
         this.parentNode.classList.add('is-collapsed');
@@ -114,10 +114,16 @@ function manageBoxes() {
 
 function headerParallax() {
   var hero = document.getElementById('hero');
+  // var temp = window.getComputedStyle(hero, null).backgroundPosition.trim().split(/\s+/);
+  // var heroPositions = {
+  //   'left': temp[0],
+  //   'top': temp[1]
+  // };
+  var width = window.innerWidth;
   var scrollTop = document.body.scrollTop;
   if (scrollTop > 0) {
     hero.style.backgroundPosition = 'center ' + -scrollTop/2 + 'px';
-  } else {
+  }else {
     hero.style.backgroundPosition = 'center 0';
   }
 }

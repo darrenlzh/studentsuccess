@@ -17,9 +17,13 @@
       font-size: 1.9rem
     p
       font-size: 1rem
+    &:hover
+      .highlight
+        // color: $LetchworthAutumn
+        animation: changeColor 4s ease infinite
 
   #infographics
-    padding: 50px 0
+    padding: 50px 0 90px
     height: auto
     width: 100%
     margin: 0
@@ -29,6 +33,8 @@
       flex-direction: column
       justify-content: center
       align-items: center
+      @media screen and (max-width: $breakXXSmall)
+        height: 180px
       &__icon
         width: 150px
         height: 150px
@@ -45,6 +51,9 @@
           img
             width: 90px
             height: 90px
+            @media screen and (max-width: $breakXXSmall)
+              width: 60px
+              height: 60px
         .infographic__text
           padding-top: 10px
 
@@ -59,3 +68,15 @@
           padding: 35px 50px
         @media screen and (max-width: $breakSmall)
           padding: 20px 5px
+
+@keyframes changeColor
+  0%
+    color: $LetchworthAutumn
+  25%
+    color: $SolarStrand
+  50%
+    color: $LakeLaSalle
+  75%
+    color: $UBBlue
+  100%
+    color: $LetchworthAutumn

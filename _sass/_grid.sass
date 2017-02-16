@@ -243,14 +243,10 @@
     h3
       margin-bottom: 0
       color: $UBBlue
-      text-decoration: underline
-      &:hover
-        color: darken($UBBlue, 10%)
-        text-decoration: none
     p.staff__title
       margin-top: 0
     .staff-bio
-      padding: 0 25px 5px
+      padding: 5px 25px 5px
       animation: fadeContent .3s ease-in
     .staff-header
       display: flex
@@ -259,7 +255,6 @@
       padding: 10px 25px
       &:hover
         cursor: pointer
-        background: $BairdPoint
     &__photo
       width: 125px
       height: 160px
@@ -270,14 +265,25 @@
       justify-content: center
       // padding-left: 3em
     &.is-collapsed
+      .staff-header:hover
+        background: $BairdPoint
+        h3
+          color: $UBBlue
+          text-decoration: none
       .staff-bio
         height: 0
         display: none
+      h3
+        text-decoration: underline
     &.is-expanded
       background: $BairdPoint
       margin: 10px 0
       .staff-bio
         height: auto
+        background: lighten($BairdPoint, 7%)
+      .staff__title
+        font-family: 'Sofia Pro Medium', sans-serif
+
 
 #steps-to-success
   border-color: $LetchworthAutumn
