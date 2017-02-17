@@ -54,6 +54,8 @@
         opacity: 0
         transform: translateY(100%)
         font-size: 1.1rem
+      .dropdown
+        transition: all .3s cubic-bezier(.81,.01,.23,.99)
     .view-expand
       box-sizing: border-box
       overflow: hidden
@@ -81,6 +83,8 @@
           height: 0
           padding-top: 0
           padding-bottom: 0
+        .dropdown
+          transform: translateY(-30%)
       .arrow
         display: block
         border-bottom: 8px solid black
@@ -155,12 +159,61 @@
       .view
         &:hover
           cursor: pointer
+          .dropdown
+            transform: translateY(0%) translateX(10%) scale(1.2)
           .view__inner
             transform: translateY(-100%)
             opacity: 0
           .view__inner--hovered
             transform: translateY(-100%)
             opacity: 1
+        .dropdown
+          display: block
+          position: absolute
+          width: 50%
+          height: 100%
+          bottom: 10%
+          left: 50%
+          &__left
+            width: 2px
+            height: 5%
+            background: white
+            position: absolute
+            bottom: 10%
+            transform: translateX(-240%) rotate(-45deg)
+          &__right
+            width: 2px
+            height: 5%
+            background: white
+            position: absolute
+            bottom: 10%
+            transform: translateX(240%) rotate(45deg)
+          @media screen and (max-width: $breakMedium)
+            .dropdown__left
+              transform: translateX(-150%) rotate(-45deg)
+            .dropdown__right
+              transform: translateX(150%) rotate(45deg)
+          @media screen and (max-width: $breakSmall)
+            .dropdown__left
+              transform: translateX(-250%) rotate(-45deg)
+            .dropdown__right
+              transform: translateX(250%) rotate(45deg)
+          @media screen and (max-width: $breakXSmall)
+            .dropdown__left
+              transform: translateX(-180%) rotate(-45deg)
+            .dropdown__right
+              transform: translateX(180%) rotate(45deg)
+          @media screen and (max-width: $breakXXSmall)
+            .dropdown__left
+              transform: translateX(-150%) rotate(-45deg)
+            .dropdown__right
+              transform: translateX(150%) rotate(45deg)
+          @media screen and (max-width: $breakVerySmall)
+            .dropdown__left
+              transform: translateX(-100%) rotate(-45deg)
+            .dropdown__right
+              transform: translateX(100%) rotate(45deg)
+
 
   .student
     .box
@@ -204,7 +257,7 @@
         display: flex
         flex-direction: column
         margin-top: 0
-        width: 90%
+        width: 85%
       li
         a
           display: block

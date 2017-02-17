@@ -121,9 +121,9 @@ function headerParallax() {
   // };
   var width = window.innerWidth;
   var scrollTop = document.body.scrollTop;
-  if (scrollTop > 0) {
+  if (scrollTop > 0 && width > 767) {
     hero.style.backgroundPosition = 'center ' + -scrollTop/2 + 'px';
-  }else {
+  } else {
     hero.style.backgroundPosition = 'center 0';
   }
 }
