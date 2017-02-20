@@ -1,13 +1,13 @@
 ready(function() {
   resizeBoxes();
-  fadeIn();
+  appearEffects();
   manageBoxes();
   window.addEventListener('resize', function() {
     resizeBoxes();
   });
   window.addEventListener('scroll', function() {
     headerParallax();
-    enterRotate();
+    scrollEnterFade();
   });
 });
 
@@ -37,12 +37,20 @@ function resizeBoxes() {
   });
 }
 
-function fadeIn() {
+function appearEffects() {
   var fades = document.querySelectorAll('div.fade-elem');
   Array.prototype.forEach.call(fades, function(fade, i) {
     setTimeout(function(i) {
       fade.classList.add('fade-in');
     }, 150 * (i+1));
+  });
+  var arrow = document.getElementById('arrow');
+  setTimeout(function() {
+    arrow.classList.add('fade-down');
+  }, 1000);
+  var main = document.getElementById('main');
+  arrow.addEventListener('click', function() {
+    bringIntoView(main, 1800);
   });
 }
 
@@ -128,8 +136,10 @@ function headerParallax() {
   }
 }
 
-function enterRotate() {
+function scrollEnterFade() {
   var scrollTop = document.body.scrollTop;
+  var arrow = document.getElementById('arrow');
+  var mainTop = document.getElementById('main').offsetTop;
   var navTop = document.getElementById('navigation').offsetTop;
   var shTop = document.getElementById('section-heading').offsetTop;
   var sp1Top = document.getElementById('student-profile-1').offsetTop;
@@ -143,6 +153,14 @@ function enterRotate() {
   var sp2Boxes = document.querySelectorAll('div#student-profile-2 div.box');
   var sp3Boxes = document.querySelectorAll('div#student-profile-3 div.box');
   var seBoxes = document.querySelectorAll('div#section-ending div.box');
+
+  if( scrollTop > (mainTop*0.4) ) {
+    arrow.classList.add('hide-elem');
+    arrow.classList.remove('show-elem');
+  } else {
+    arrow.classList.add('show-elem');
+    arrow.classList.remove('hide-elem');
+  }
   if ( (navTop-scrollTop) < windowHeight) {
     Array.prototype.forEach.call(navBoxes, function(box, i) {
       setTimeout(function(i) {
