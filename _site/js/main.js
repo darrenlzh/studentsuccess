@@ -1,7 +1,7 @@
 ready(function() {
   resizeBoxes();
   appearEffects();
-  manageBoxes();
+  clickControl();
   window.addEventListener('resize', function() {
     resizeBoxes();
   });
@@ -20,17 +20,17 @@ function ready(fn) {
 }
 
 function resizeBoxes() {
-  var variable = document.getElementById('dynamic-height-for-grid');
-  var variable2 = document.getElementById('dynamic-width-for-expand');
-  var viewWidth = variable.offsetWidth;
-  var boxWidth = variable2.offsetWidth;
-  var views = document.querySelectorAll('div.view');
-  var viewExpands = document.querySelectorAll('div.view-expand');
+  var variable = document.getElementById('dynamic-height-for-grid'),
+      variable2 = document.getElementById('dynamic-width-for-expand'),
+      viewWidth = variable.offsetWidth,
+      boxWidth = variable2.offsetWidth,
+      views = document.querySelectorAll('div.view'),
+      viewExpands = document.querySelectorAll('div.view-expand');
   Array.prototype.forEach.call(views, function(view, i) {
     view.style.height = viewWidth;
   });
-  var refWidth = document.getElementById('ssbr').offsetWidth;
-  var students = document.querySelectorAll('div.student');
+  var refWidth = document.getElementById('ssbr').offsetWidth,
+      students = document.querySelectorAll('div.student');
   Array.prototype.forEach.call(students, function(student, i) {
     var studentView = student.querySelector('div.student__heading div.view');
     studentView.style.height = refWidth;
@@ -55,9 +55,9 @@ function appearEffects() {
 }
 
 function changeTab(elem, tabName) {
-  var i, j;
-  var navList = document.querySelectorAll('#about div.sidebar ul li');
-  var contentInner = document.getElementsByClassName('content__inner');
+  var i, j,
+      navList = document.querySelectorAll('#about div.sidebar ul li'),
+      contentInner = document.getElementsByClassName('content__inner');
   for (i=0; i<contentInner.length; i++) {
     contentInner[i].style.display = 'none';
   }
@@ -68,7 +68,7 @@ function changeTab(elem, tabName) {
   elem.parentNode.classList.add('active');
 }
 
-function manageBoxes() {
+function clickControl() {
   var views = document.querySelectorAll('div.box div.view');
   Array.prototype.forEach.call(views, function(view, i) {
     view.addEventListener('click', function() {
@@ -119,21 +119,21 @@ function manageBoxes() {
     });
   });
 
-  var hereButton = document.getElementById('here-button');
+  var hereButton = document.getElementById('here-button'),
+      studentProfile = document.querySelector('#student-profile-1 div.student__heading');
   hereButton.addEventListener('click', function() {
-    bringIntoView(this, 1000);
+    if (studentProfile.classList.contains('is-collapsed')) {
+      studentProfile.classList.remove('is-collapsed');
+      studentProfile.classList.add('is-expanded');
+    }
+    bringIntoView(studentProfile, 1000);
   });
 }
 
 function headerParallax() {
-  var hero = document.getElementById('hero');
-  // var temp = window.getComputedStyle(hero, null).backgroundPosition.trim().split(/\s+/);
-  // var heroPositions = {
-  //   'left': temp[0],
-  //   'top': temp[1]
-  // };
-  var width = window.innerWidth;
-  var scrollTop = document.body.scrollTop;
+  var hero = document.getElementById('hero'),
+      width = window.innerWidth,
+      scrollTop = document.body.scrollTop;
   if (scrollTop > 0 && width > 767) {
     hero.style.backgroundPosition = 'center ' + -scrollTop/2 + 'px';
   } else {
@@ -142,22 +142,22 @@ function headerParallax() {
 }
 
 function scrollControl() {
-  var scrollTop = document.body.scrollTop;
-  var arrow = document.getElementById('arrow');
-  var mainTop = document.getElementById('main').offsetTop;
-  var navTop = document.getElementById('navigation').offsetTop;
-  var shTop = document.getElementById('section-heading').offsetTop;
-  var sp1Top = document.getElementById('student-profile-1').offsetTop;
-  var sp2Top = document.getElementById('student-profile-2').offsetTop;
-  var sp3Top = document.getElementById('student-profile-3').offsetTop;
-  var seTop = document.getElementById('section-ending').offsetTop;
-  var windowHeight = window.innerHeight;
-  var navBoxes = document.querySelectorAll('div#navigation div.box');
-  var shBoxes = document.querySelectorAll('div#section-heading div.box');
-  var sp1Boxes = document.querySelectorAll('div#student-profile-1 div.box');
-  var sp2Boxes = document.querySelectorAll('div#student-profile-2 div.box');
-  var sp3Boxes = document.querySelectorAll('div#student-profile-3 div.box');
-  var seBoxes = document.querySelectorAll('div#section-ending div.box');
+  var scrollTop = document.body.scrollTop,
+      arrow = document.getElementById('arrow'),
+      mainTop = document.getElementById('main').offsetTop,
+      navTop = document.getElementById('navigation').offsetTop,
+      shTop = document.getElementById('section-heading').offsetTop,
+      sp1Top = document.getElementById('student-profile-1').offsetTop,
+      sp2Top = document.getElementById('student-profile-2').offsetTop,
+      sp3Top = document.getElementById('student-profile-3').offsetTop,
+      seTop = document.getElementById('section-ending').offsetTop,
+      windowHeight = window.innerHeight,
+      navBoxes = document.querySelectorAll('div#navigation div.box'),
+      shBoxes = document.querySelectorAll('div#section-heading div.box'),
+      sp1Boxes = document.querySelectorAll('div#student-profile-1 div.box'),
+      sp2Boxes = document.querySelectorAll('div#student-profile-2 div.box'),
+      sp3Boxes = document.querySelectorAll('div#student-profile-3 div.box'),
+      seBoxes = document.querySelectorAll('div#section-ending div.box');
 
   if( scrollTop > (mainTop*0.4) ) {
     arrow.classList.add('hide-elem');

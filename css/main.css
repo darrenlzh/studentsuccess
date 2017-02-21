@@ -750,14 +750,14 @@ header {
   margin: 20px 0 30px; }
   #section-heading #here-button .shape {
     fill: transparent;
-    stroke-dasharray: 0 2000;
-    stroke-dashoffset: -530;
+    stroke-dasharray: 200 2000;
+    stroke-dashoffset: -443;
     stroke-width: 8px;
     stroke: #005bbb; }
   #section-heading #here-button .text {
     color: #005bbb;
     position: relative;
-    top: -48px; }
+    top: -45px; }
   #section-heading #here-button:hover {
     cursor: pointer; }
     #section-heading #here-button:hover .shape {
@@ -766,8 +766,8 @@ header {
 
 @-webkit-keyframes draw {
   from {
-    stroke-dasharray: 0 2000;
-    stroke-dashoffset: -530;
+    stroke-dasharray: 200 2000;
+    stroke-dashoffset: -443;
     stroke-width: 8px; }
   to {
     stroke-dasharray: 760;
@@ -776,8 +776,8 @@ header {
 
 @keyframes draw {
   from {
-    stroke-dasharray: 0 2000;
-    stroke-dashoffset: -530;
+    stroke-dasharray: 200 2000;
+    stroke-dashoffset: -443;
     stroke-width: 8px; }
   to {
     stroke-dasharray: 760;
