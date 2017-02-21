@@ -7,7 +7,7 @@ ready(function() {
   });
   window.addEventListener('scroll', function() {
     headerParallax();
-    scrollEnterFade();
+    scrollControl();
   });
 });
 
@@ -118,6 +118,11 @@ function manageBoxes() {
       }
     });
   });
+
+  var hereButton = document.getElementById('here-button');
+  hereButton.addEventListener('click', function() {
+    bringIntoView(this, 1000);
+  });
 }
 
 function headerParallax() {
@@ -136,7 +141,7 @@ function headerParallax() {
   }
 }
 
-function scrollEnterFade() {
+function scrollControl() {
   var scrollTop = document.body.scrollTop;
   var arrow = document.getElementById('arrow');
   var mainTop = document.getElementById('main').offsetTop;

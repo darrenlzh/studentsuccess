@@ -390,15 +390,49 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    padding: 100px 50px
+    padding: 100px 50px 0
     @media screen and (max-width: $breakSmall)
       padding: 70px 10px
     span
       font-family: 'Sofia Pro Medium', sans-serif
       color: $UBBlue
-      text-decoration: underline
+      &:hover
+        cursor: pointer
     &__inner
       height: auto
+  #here-button
+    display: inline-block
+    width: 50%
+    height:auto
+    margin: 20px 0 30px
+    .shape
+      fill: transparent
+      // stroke-dasharray: 301 2000
+      stroke-dasharray: 0 2000
+      // stroke-dashoffset: -390
+      stroke-dashoffset: -530
+      stroke-width: 8px
+      stroke: $UBBlue
+    .text
+      color: $UBBlue
+      position: relative
+      top: -48px
+    &:hover
+      cursor: pointer
+      .shape
+        // animation: draw .5s ease forwards
+        animation: draw .5s cubic-bezier(.81,.01,.23,.99) forwards
+
+@keyframes draw
+  from
+    stroke-dasharray: 0 2000
+    stroke-dashoffset: -530
+    stroke-width: 8px
+  to
+    stroke-dasharray: 760
+    stroke-dashoffset: 0
+    stroke-width: 5px
+
 
 #section-ending
   .box

@@ -1,11 +1,36 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="261px" height="92px" viewBox="0 0 261 92" style="enable-background:new 0 0 261 92;" xml:space="preserve">
+<svg version="1.1" id="here-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 261 92" style="enable-background:new 0 0 261 92;" xml:space="preserve">
 <style type="text/css">
 <![CDATA[
-	.st0{fill:none;stroke:#005BBB;stroke-width:3;stroke-linejoin:round;}
-	.st1{fill:none;stroke:#005BBB;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#005BBB;stroke-width:3;stroke-linejoin:round;stroke-dasharray:5,5;}
-	.st3{fill:#005BBB;}
+	.st0 {
+		fill:none;
+		stroke: #000;
+		stroke-width: 3;
+		stroke-linejoin: round;
+	}
+	.st1 {
+		fill: none;
+		stroke: #005BBB;
+		stroke-width: 3;
+		stroke-linejoin: round;
+		stroke-miterlimit: 10;
+		}
+	.st2 {
+		fill: none;
+		stroke: #005BBB;
+		stroke-width: 3;
+		stroke-linejoin: round;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+		animation: draw 4s linear forwards;
+		}
+	.st3 {
+		fill: #000;
+	}
+	@keyframes draw {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
 ]]>
 </style>
 <g>

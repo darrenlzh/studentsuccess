@@ -732,16 +732,57 @@ header {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  padding: 100px 50px; }
+  padding: 100px 50px 0; }
   @media screen and (max-width: 767px) {
     #section-heading .inner {
       padding: 70px 10px; } }
   #section-heading .inner span {
     font-family: 'Sofia Pro Medium', sans-serif;
-    color: #005bbb;
-    text-decoration: underline; }
+    color: #005bbb; }
+    #section-heading .inner span:hover {
+      cursor: pointer; }
   #section-heading .inner__inner {
     height: auto; }
+
+#section-heading #here-button {
+  display: inline-block;
+  width: 50%;
+  margin: 20px 0 30px; }
+  #section-heading #here-button .shape {
+    fill: transparent;
+    stroke-dasharray: 0 2000;
+    stroke-dashoffset: -530;
+    stroke-width: 8px;
+    stroke: #005bbb; }
+  #section-heading #here-button .text {
+    color: #005bbb;
+    position: relative;
+    top: -48px; }
+  #section-heading #here-button:hover {
+    cursor: pointer; }
+    #section-heading #here-button:hover .shape {
+      -webkit-animation: draw 0.5s cubic-bezier(0.81, 0.01, 0.23, 0.99) forwards;
+              animation: draw 0.5s cubic-bezier(0.81, 0.01, 0.23, 0.99) forwards; }
+
+@-webkit-keyframes draw {
+  from {
+    stroke-dasharray: 0 2000;
+    stroke-dashoffset: -530;
+    stroke-width: 8px; }
+  to {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 5px; } }
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 0 2000;
+    stroke-dashoffset: -530;
+    stroke-width: 8px; }
+  to {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 5px; } }
 
 #section-ending .box {
   font-family: 'Sofia Pro Medium', sans-serif;
