@@ -21,7 +21,7 @@ header
           width: 166.66px
           height: auto
     &__title
-      font-family: 'Sofia Pro Extra Light', sans-serif
+      font-family: 'Sofia Pro ExtraLight', Fallback,  sans-serif
       font-size: 2rem
       // img
       //   width: 400px
@@ -81,7 +81,7 @@ header
       background-size: auto 100%
       overflow: hidden
       background-attachment: scroll
-      background-position: center
+      background-position: center bottom
   .tagline
     width: 90%
     position: absolute
@@ -120,6 +120,8 @@ header
     position: absolute
     width: 100px
     height: 100px
+    // border-radius: 50%
+    // background-color: rgba(255,255,255,0.2)
     bottom: 50px
     left: 0
     right: 0
@@ -150,6 +152,8 @@ header
     &.hide-elem
       opacity: 0
       bottom: -80px
+    @media screen and (max-width: $breakSmall)
+      display: none
 .fade-elem
   transition: opacity .5s ease-in-out
   opacity: 0

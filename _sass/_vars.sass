@@ -1,10 +1,16 @@
+$variables: 'and fonts'
+
+// Media query break points
 $breakMedium: 991px
 $breakSmall: 767px
 $breakXSmall: 600px
 $breakXXSmall: 482px
 $breakVerySmall: 380px
+$breakSmallest: 330px
 $siteLogoBreak: 500px
 
+// Gutter between boxes when view is expanded.
+// Look at grid.sass
 $viewExpandGap: 8px
 
 $UBBlue: #005bbb
@@ -16,34 +22,52 @@ $BairdPoint: #e1e1e1
 $VictorEBlue: #41b6e6
 
 // FONTS
+// Supports IE9 and up, and most modern browsers
 @font-face
 	font-family: 'Freeland'
-	src: url(../fonts/Freeland.woff)
+	src: url(../fonts/Freeland.eot)
+	src: url(../fonts/Freeland.ttf) format('ttf')
+	src: url(../fonts/Freeland.woff) format('woff')
+	src: url(../fonts/Freeland.woff2) format('woff2')
 
 @font-face
 	font-family: 'Sofia Pro'
-	src: url(../fonts/SofiaWebRegular.woff)
+	src: url(../fonts/SofiaWebRegular.eot)
+	src: url(../fonts/SofiaWebRegular.ttf) format('ttf')
+	src: url(../fonts/SofiaWebRegular.woff) format('woff')
+	src: url(../fonts/SofiaWebRegular.woff2) format('woff2')
 
 @font-face
 	font-family: 'Sofia Pro Medium'
-	src: url(../fonts/SofiaWebMedium.woff)
+	src: url(../fonts/SofiaWebMedium.eot)
+	src: url(../fonts/SofiaWebMedium.ttf) format('ttf')
+	src: url(../fonts/SofiaWebMedium.woff) format('woff')
+	src: url(../fonts/SofiaWebMedium.woff2) format('woff2')
 
 @font-face
 	font-family: 'Sofia Pro Light'
-	src: url(../fonts/SofiaWebLight.woff)
+	src: url(../fonts/SofiaWebLight.eot)
+	src: url(../fonts/SofiaWebLight.ttf) format('ttf')
+	src: url(../fonts/SofiaWebLight.woff) format('woff')
+	src: url(../fonts/SofiaWebLight.woff2) format('woff2')
 
 @font-face
-	font-family: 'Sofia Pro Extra Light'
-	src: url(../fonts/SofiaProExtraLight.otf)
+	font-family: 'Sofia Pro ExtraLight'
+	src: url('../fonts/SofiaProExtraLight.eot') format('embedded-opentype')
+	src: url(../fonts/SofiaProExtraLight.ttf) format('ttf')
+	src: url(../fonts/SofiaProExtraLight.woff) format('woff')
+	src: url(../fonts/SofiaProExtraLight.woff2) format('woff2')
 
 @font-face
 	font-family: 'Sofia Pro UltraLight'
-	src: url(../fonts/SofiaProUltraLight.otf)
+	src: url(../fonts/SofiaProUltraLight.eot)
+	src: url(../fonts/SofiaProUltraLight.ttf) format('ttf')
+	src: url(../fonts/SofiaProUltraLight.woff) format('woff')
+	src: url(../fonts/SofiaProUltraLight.woff2) format('woff2')
 
 @font-face
-	font-family: 'More Pro Book'
-	src: url(../fonts/MoreWebBook.woff)
-
-@font-face
-	font-family: 'More Pro Bold'
-	src: url(../fonts/MoreWebBold.woff)
+	font-family: 'More Pro'
+	src: url(../fonts/MoreProBook.eot)
+	src: url(../fonts/MoreProBook.ttf) format('ttf')
+	src: url(../fonts/MoreProBook.woff) format('woff')
+	src: url(../fonts/MoreProBook.woff2) format('woff2')

@@ -1,35 +1,52 @@
 @import url(vendor/bootstrap.min.css);
 @font-face {
   font-family: 'Freeland';
-  src: url(../fonts/Freeland.woff); }
+  src: url(../fonts/Freeland.eot);
+  src: url(../fonts/Freeland.ttf) format("ttf");
+  src: url(../fonts/Freeland.woff) format("woff");
+  src: url(../fonts/Freeland.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Sofia Pro';
-  src: url(../fonts/SofiaWebRegular.woff); }
+  src: url(../fonts/SofiaWebRegular.eot);
+  src: url(../fonts/SofiaWebRegular.ttf) format("ttf");
+  src: url(../fonts/SofiaWebRegular.woff) format("woff");
+  src: url(../fonts/SofiaWebRegular.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Sofia Pro Medium';
-  src: url(../fonts/SofiaWebMedium.woff); }
+  src: url(../fonts/SofiaWebMedium.eot);
+  src: url(../fonts/SofiaWebMedium.ttf) format("ttf");
+  src: url(../fonts/SofiaWebMedium.woff) format("woff");
+  src: url(../fonts/SofiaWebMedium.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Sofia Pro Light';
-  src: url(../fonts/SofiaWebLight.woff); }
+  src: url(../fonts/SofiaWebLight.eot);
+  src: url(../fonts/SofiaWebLight.ttf) format("ttf");
+  src: url(../fonts/SofiaWebLight.woff) format("woff");
+  src: url(../fonts/SofiaWebLight.woff2) format("woff2"); }
 
 @font-face {
-  font-family: 'Sofia Pro Extra Light';
-  src: url(../fonts/SofiaProExtraLight.otf); }
+  font-family: 'Sofia Pro ExtraLight';
+  src: url("../fonts/SofiaProExtraLight.eot") format("embedded-opentype");
+  src: url(../fonts/SofiaProExtraLight.ttf) format("ttf");
+  src: url(../fonts/SofiaProExtraLight.woff) format("woff");
+  src: url(../fonts/SofiaProExtraLight.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Sofia Pro UltraLight';
-  src: url(../fonts/SofiaProUltraLight.otf); }
+  src: url(../fonts/SofiaProUltraLight.eot);
+  src: url(../fonts/SofiaProUltraLight.ttf) format("ttf");
+  src: url(../fonts/SofiaProUltraLight.woff) format("woff");
+  src: url(../fonts/SofiaProUltraLight.woff2) format("woff2"); }
 
 @font-face {
-  font-family: 'More Pro Book';
-  src: url(../fonts/MoreWebBook.woff); }
-
-@font-face {
-  font-family: 'More Pro Bold';
-  src: url(../fonts/MoreWebBold.woff); }
+  font-family: 'More Pro';
+  src: url(../fonts/MoreProBook.eot);
+  src: url(../fonts/MoreProBook.ttf) format("ttf");
+  src: url(../fonts/MoreProBook.woff) format("woff");
+  src: url(../fonts/MoreProBook.woff2) format("woff2"); }
 
 header {
   height: 100vh;
@@ -62,7 +79,7 @@ header {
             width: 166.66px;
             height: auto; } }
     header .header__title {
-      font-family: 'Sofia Pro Extra Light', sans-serif;
+      font-family: 'Sofia Pro ExtraLight', Fallback,  sans-serif;
       font-size: 2rem; }
     header .header .fade-elem {
       transition: all .3s ease-in-out;
@@ -114,7 +131,7 @@ header {
       background-size: auto 100%;
       overflow: hidden;
       background-attachment: scroll;
-      background-position: center; } }
+      background-position: center bottom; } }
   header .tagline {
     width: 90%;
     position: absolute;
@@ -194,6 +211,9 @@ header {
     header #arrow.hide-elem {
       opacity: 0;
       bottom: -80px; }
+    @media screen and (max-width: 767px) {
+      header #arrow {
+        display: none; } }
 
 .fade-elem {
   transition: opacity .5s ease-in-out;
@@ -354,6 +374,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
       height: inherit;
+      width: 100%;
       padding: 10%;
       text-align: center;
       transition: -webkit-transform 0.3s cubic-bezier(0.81, 0.01, 0.23, 0.99), opacity 0.1s ease-in-out;
@@ -535,6 +556,9 @@ header {
   @media screen and (max-width: 767px) {
     .grid .student .box .view {
       font-size: 1.3rem; } }
+  @media screen and (max-width: 380px) {
+    .grid .student .box .view {
+      font-size: 1.1rem; } }
 
 .grid .student .box .view-expand {
   font-size: 1rem; }
@@ -735,7 +759,7 @@ header {
   padding: 100px 50px 0; }
   @media screen and (max-width: 767px) {
     #section-heading .inner {
-      padding: 70px 10px; } }
+      padding: 70px 10px 0; } }
   #section-heading .inner span {
     font-family: 'Sofia Pro Medium', sans-serif;
     color: #005bbb; }
@@ -746,7 +770,7 @@ header {
 
 #section-heading #here-button {
   display: inline-block;
-  width: 50%;
+  width: 65%;
   margin: 20px 0 30px; }
   #section-heading #here-button .shape {
     fill: transparent;
@@ -760,29 +784,19 @@ header {
     top: -45px; }
   #section-heading #here-button:hover {
     cursor: pointer; }
-    #section-heading #here-button:hover .shape {
-      -webkit-animation: draw 0.5s cubic-bezier(0.81, 0.01, 0.23, 0.99) forwards;
-              animation: draw 0.5s cubic-bezier(0.81, 0.01, 0.23, 0.99) forwards; }
-
-@-webkit-keyframes draw {
-  from {
-    stroke-dasharray: 200 2000;
-    stroke-dashoffset: -443;
-    stroke-width: 8px; }
-  to {
-    stroke-dasharray: 760;
-    stroke-dashoffset: 0;
-    stroke-width: 5px; } }
-
-@keyframes draw {
-  from {
-    stroke-dasharray: 200 2000;
-    stroke-dashoffset: -443;
-    stroke-width: 8px; }
-  to {
-    stroke-dasharray: 760;
-    stroke-dashoffset: 0;
-    stroke-width: 5px; } }
+    @media screen and (min-width: 767px) {
+      #section-heading #here-button:hover .shape {
+        -webkit-animation: draw 0.5s cubic-bezier(0.81, 0.01, 0.23, 0.99) forwards;
+                animation: draw 0.5s cubic-bezier(0.81, 0.01, 0.23, 0.99) forwards; } }
+  @media screen and (max-width: 767px) {
+    #section-heading #here-button .shape {
+      stroke-dasharray: 0 0;
+      stroke-width: 5px; }
+    #section-heading #here-button .text {
+      top: -40px; } }
+  @media screen and (max-width: 330px) {
+    #section-heading #here-button .text {
+      top: -50px; } }
 
 #section-ending .box {
   font-family: 'Sofia Pro Medium', sans-serif;
@@ -803,7 +817,7 @@ header {
     height: auto; }
 
 .quote {
-  font-family: 'More Pro Book', serif;
+  font-family: 'More Pro', serif;
   font-size: 1.7em;
   width: 50%;
   float: right;
@@ -834,6 +848,26 @@ header {
     opacity: 0.5; }
   100% {
     opacity: 1; } }
+
+@-webkit-keyframes draw {
+  from {
+    stroke-dasharray: 200 2000;
+    stroke-dashoffset: -443;
+    stroke-width: 8px; }
+  to {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 5px; } }
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 200 2000;
+    stroke-dashoffset: -443;
+    stroke-width: 8px; }
+  to {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 5px; } }
 
 html {
   font-size: 16px; }

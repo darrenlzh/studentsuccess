@@ -24,6 +24,7 @@ function resizeBoxes() {
       variable2 = document.getElementById('dynamic-width-for-expand'),
       viewWidth = variable.offsetWidth,
       boxWidth = variable2.offsetWidth,
+      width = window.innerWidth,
       views = document.querySelectorAll('div.view'),
       viewExpands = document.querySelectorAll('div.view-expand');
   Array.prototype.forEach.call(views, function(view, i) {
@@ -35,6 +36,19 @@ function resizeBoxes() {
     var studentView = student.querySelector('div.student__heading div.view');
     studentView.style.height = refWidth;
   });
+  var hereButton = document.getElementById('here-button'),
+      svg = hereButton.querySelector('svg'),
+      shape = hereButton.querySelector('svg rect.shape');
+  if (width < 375) {
+    svg.setAttribute('width', '190px');
+    shape.setAttribute('width', '190px');
+  } else if (width >= 375 && width < 768) {
+    svg.setAttribute('width', '220px');
+    shape.setAttribute('width', '220px');
+  } else {
+    svg.setAttribute('width', '320px');
+    shape.setAttribute('width', '320px');
+  }
 }
 
 function appearEffects() {

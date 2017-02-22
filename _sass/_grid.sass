@@ -47,6 +47,7 @@
         align-items: center
         justify-content: center
         height: inherit
+        width: 100%
         padding: 10%
         text-align: center
         transition: transform .3s cubic-bezier(.81,.01,.23,.99), opacity .1s ease-in-out
@@ -221,6 +222,8 @@
         font-size: 1.8rem
         @media screen and (max-width: $breakSmall)
           font-size: 1.3rem
+        @media screen and (max-width: $breakVerySmall)
+          font-size: 1.1rem
       .view-expand
         font-size: 1rem
     img
@@ -392,7 +395,7 @@
     align-items: center
     padding: 100px 50px 0
     @media screen and (max-width: $breakSmall)
-      padding: 70px 10px
+      padding: 70px 10px 0
     span
       font-family: 'Sofia Pro Medium', sans-serif
       color: $UBBlue
@@ -402,7 +405,7 @@
       height: auto
   #here-button
     display: inline-block
-    width: 50%
+    width: 65%
     height:auto
     margin: 20px 0 30px
     .shape
@@ -419,20 +422,19 @@
       top: -45px
     &:hover
       cursor: pointer
+      @media screen and (min-width: $breakSmall)
+        .shape
+          // animation: draw .5s ease forwards
+          animation: draw .5s cubic-bezier(.81,.01,.23,.99) forwards
+    @media screen and (max-width: $breakSmall)
       .shape
-        // animation: draw .5s ease forwards
-        animation: draw .5s cubic-bezier(.81,.01,.23,.99) forwards
-
-@keyframes draw
-  from
-    stroke-dasharray: 200 2000
-    stroke-dashoffset: -443
-    stroke-width: 8px
-  to
-    stroke-dasharray: 760
-    stroke-dashoffset: 0
-    stroke-width: 5px
-
+        stroke-dasharray: 0 0
+        stroke-width: 5px
+      .text
+        top: -40px
+    @media screen and (max-width: $breakSmallest)
+      .text
+        top: -50px
 
 #section-ending
   .box
@@ -449,7 +451,7 @@
       height: auto
 
 .quote
-  font-family: 'More Pro Book', serif
+  font-family: 'More Pro', serif
   font-size: 1.7em
   width: 50%
   float: right
@@ -471,3 +473,13 @@
     opacity: 0.5
   100%
     opacity: 1
+
+@keyframes draw
+  from
+    stroke-dasharray: 200 2000
+    stroke-dashoffset: -443
+    stroke-width: 8px
+  to
+    stroke-dasharray: 760
+    stroke-dashoffset: 0
+    stroke-width: 5px
