@@ -23,11 +23,8 @@
     font-size: 1.5rem
     padding: 4px
     opacity: 0
-    // transform: scale(0)
-    // transition: transform .7s cubic-bezier(.81,.01,.23,.99)
     transition: opacity .7s ease
     &.enter
-      // transform: scale(1)
       opacity: 1
     &.about .view
       background: $UBBlue
@@ -161,7 +158,7 @@
         &:hover
           cursor: pointer
           .dropdown
-            transform: translateY(0%) translateX(10%) scale(1.2)
+            transform: scale(1.1) translateY(5px)
           .view__inner
             transform: translateY(-100%)
             opacity: 0
@@ -169,52 +166,13 @@
             transform: translateY(-100%)
             opacity: 1
         .dropdown
-          display: block
+          width: 25%
+          height: auto
           position: absolute
-          width: 50%
-          height: 100%
-          bottom: 10%
-          left: 50%
-          &__left
-            width: 2px
-            height: 5%
-            background: white
-            position: absolute
-            bottom: 10%
-            transform: translateX(-240%) rotate(-45deg)
-          &__right
-            width: 2px
-            height: 5%
-            background: white
-            position: absolute
-            bottom: 10%
-            transform: translateX(240%) rotate(45deg)
-          @media screen and (max-width: $breakMedium)
-            .dropdown__left
-              transform: translateX(-150%) rotate(-45deg)
-            .dropdown__right
-              transform: translateX(150%) rotate(45deg)
-          @media screen and (max-width: $breakSmall)
-            .dropdown__left
-              transform: translateX(-250%) rotate(-45deg)
-            .dropdown__right
-              transform: translateX(250%) rotate(45deg)
-          @media screen and (max-width: $breakXSmall)
-            .dropdown__left
-              transform: translateX(-180%) rotate(-45deg)
-            .dropdown__right
-              transform: translateX(180%) rotate(45deg)
-          @media screen and (max-width: $breakXXSmall)
-            .dropdown__left
-              transform: translateX(-150%) rotate(-45deg)
-            .dropdown__right
-              transform: translateX(150%) rotate(45deg)
-          @media screen and (max-width: $breakVerySmall)
-            .dropdown__left
-              transform: translateX(-100%) rotate(-45deg)
-            .dropdown__right
-              transform: translateX(100%) rotate(45deg)
-
+          bottom: 20px
+          left: 0
+          right: 0
+          margin: 0 auto
 
   .student
     .box
@@ -292,10 +250,16 @@
     @media screen and (max-width: $breakMedium)
       width: 100%
 
+#letter
+  p
+    &.margintop
+      margin-top: 30px
+    &.nomargin
+      margin: 0
+    &.signature
+      font-style: italic
 #staff
   .staff
-    // border-top: 1px solid $PutnamGray
-    // border-bottom: 1px solid $PutnamGray
     h3
       margin-bottom: 0
       color: $UBBlue

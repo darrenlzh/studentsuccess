@@ -64,7 +64,7 @@ function appearEffects() {
   }, 1000);
   var main = document.getElementById('main');
   arrow.addEventListener('click', function() {
-    bringIntoView(main, 1800);
+    bringIntoView(main, 500);
   });
 }
 
@@ -96,7 +96,7 @@ function clickControl() {
         this.parentNode.classList.add('is-expanded');
         var that = this;
         setTimeout(function() {
-          bringIntoView(that, 1000);
+          bringIntoView(that, 500);
         }, 250);
       } else {
         this.parentNode.classList.remove('is-expanded');
@@ -123,9 +123,6 @@ function clickControl() {
         this.parentNode.classList.remove('is-collapsed');
         this.parentNode.classList.add('is-expanded');
         var that = this;
-        // setTimeout(function() {
-        //   bringIntoView(that, 1000);
-        // }, 250);
       } else {
         this.parentNode.classList.remove('is-expanded');
         this.parentNode.classList.add('is-collapsed');
@@ -140,7 +137,7 @@ function clickControl() {
       studentProfile.classList.remove('is-collapsed');
       studentProfile.classList.add('is-expanded');
     }
-    bringIntoView(studentProfile, 1000);
+    bringIntoView(studentProfile, 500);
   });
 }
 

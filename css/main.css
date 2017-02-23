@@ -49,14 +49,14 @@
   src: url(../fonts/MoreProBook.woff2) format("woff2"); }
 
 header {
-  height: 100vh;
+  height: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
   @media screen and (max-width: 767px) {
     header {
-      height: 70vh; } }
+      height: 70%; } }
   header .header {
     height: 30%;
     display: -ms-flexbox;
@@ -79,7 +79,7 @@ header {
             width: 166.66px;
             height: auto; } }
     header .header__title {
-      font-family: 'Sofia Pro ExtraLight', Fallback,  sans-serif;
+      font-family: 'Sofia Pro ExtraLight',  sans-serif;
       font-size: 2rem; }
     header .header .fade-elem {
       transition: all .3s ease-in-out;
@@ -120,7 +120,7 @@ header {
       header .color-accent div:nth-child(4) {
         width: 25%; } }
   header #hero {
-    height: 100%;
+    height: 70%;
     background-image: url(../img/student-studying.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -167,47 +167,23 @@ header {
       header .tagline.fade-elem.fade-in {
         opacity: 1; }
   header #arrow {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
+    width: 15%;
+    height: auto;
     position: absolute;
-    width: 100px;
-    height: 100px;
-    bottom: 50px;
+    bottom: 60px;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 0 auto;
     transition: all .3s ease; }
     header #arrow:hover {
       cursor: pointer;
       -webkit-transform: scale(1.1) translateY(5px);
               transform: scale(1.1) translateY(5px); }
-    header #arrow .left {
-      display: inline-block;
-      position: relative;
-      width: 2px;
-      height: 50px;
-      background: white;
-      -webkit-transform: translateX(-16px) rotate(-45deg);
-              transform: translateX(-16px) rotate(-45deg); }
-    header #arrow .right {
-      display: inline-block;
-      position: relative;
-      width: 2px;
-      height: 50px;
-      background: white;
-      -webkit-transform: translateX(16px) rotate(45deg);
-              transform: translateX(16px) rotate(45deg); }
     header #arrow.fade-down {
-      bottom: 0; }
+      bottom: 30px; }
     header #arrow.show-elem {
       opacity: 1;
-      bottom: 0; }
+      bottom: 30px; }
     header #arrow.hide-elem {
       opacity: 0;
       bottom: -80px; }
@@ -220,6 +196,14 @@ header {
   opacity: 0; }
   .fade-elem.fade-in {
     opacity: 1; }
+
+svg.ui-arrow .st0 {
+  fill: none;
+  stroke: white;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10; }
 
 #main {
   height: auto;
@@ -482,8 +466,8 @@ header {
   .grid .box.is-collapsed .view:hover {
     cursor: pointer; }
     .grid .box.is-collapsed .view:hover .dropdown {
-      -webkit-transform: translateY(0%) translateX(10%) scale(1.2);
-              transform: translateY(0%) translateX(10%) scale(1.2); }
+      -webkit-transform: scale(1.1) translateY(5px);
+              transform: scale(1.1) translateY(5px); }
     .grid .box.is-collapsed .view:hover .view__inner {
       -webkit-transform: translateY(-100%);
               transform: translateY(-100%);
@@ -493,63 +477,13 @@ header {
               transform: translateY(-100%);
       opacity: 1; }
   .grid .box.is-collapsed .view .dropdown {
-    display: block;
+    width: 25%;
+    height: auto;
     position: absolute;
-    width: 50%;
-    height: 100%;
-    bottom: 10%;
-    left: 50%; }
-    .grid .box.is-collapsed .view .dropdown__left {
-      width: 2px;
-      height: 5%;
-      background: white;
-      position: absolute;
-      bottom: 10%;
-      -webkit-transform: translateX(-240%) rotate(-45deg);
-              transform: translateX(-240%) rotate(-45deg); }
-    .grid .box.is-collapsed .view .dropdown__right {
-      width: 2px;
-      height: 5%;
-      background: white;
-      position: absolute;
-      bottom: 10%;
-      -webkit-transform: translateX(240%) rotate(45deg);
-              transform: translateX(240%) rotate(45deg); }
-    @media screen and (max-width: 991px) {
-      .grid .box.is-collapsed .view .dropdown .dropdown__left {
-        -webkit-transform: translateX(-150%) rotate(-45deg);
-                transform: translateX(-150%) rotate(-45deg); }
-      .grid .box.is-collapsed .view .dropdown .dropdown__right {
-        -webkit-transform: translateX(150%) rotate(45deg);
-                transform: translateX(150%) rotate(45deg); } }
-    @media screen and (max-width: 767px) {
-      .grid .box.is-collapsed .view .dropdown .dropdown__left {
-        -webkit-transform: translateX(-250%) rotate(-45deg);
-                transform: translateX(-250%) rotate(-45deg); }
-      .grid .box.is-collapsed .view .dropdown .dropdown__right {
-        -webkit-transform: translateX(250%) rotate(45deg);
-                transform: translateX(250%) rotate(45deg); } }
-    @media screen and (max-width: 600px) {
-      .grid .box.is-collapsed .view .dropdown .dropdown__left {
-        -webkit-transform: translateX(-180%) rotate(-45deg);
-                transform: translateX(-180%) rotate(-45deg); }
-      .grid .box.is-collapsed .view .dropdown .dropdown__right {
-        -webkit-transform: translateX(180%) rotate(45deg);
-                transform: translateX(180%) rotate(45deg); } }
-    @media screen and (max-width: 482px) {
-      .grid .box.is-collapsed .view .dropdown .dropdown__left {
-        -webkit-transform: translateX(-150%) rotate(-45deg);
-                transform: translateX(-150%) rotate(-45deg); }
-      .grid .box.is-collapsed .view .dropdown .dropdown__right {
-        -webkit-transform: translateX(150%) rotate(45deg);
-                transform: translateX(150%) rotate(45deg); } }
-    @media screen and (max-width: 380px) {
-      .grid .box.is-collapsed .view .dropdown .dropdown__left {
-        -webkit-transform: translateX(-100%) rotate(-45deg);
-                transform: translateX(-100%) rotate(-45deg); }
-      .grid .box.is-collapsed .view .dropdown .dropdown__right {
-        -webkit-transform: translateX(100%) rotate(45deg);
-                transform: translateX(100%) rotate(45deg); } }
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
 
 .grid .student .box .view {
   font-size: 1.8rem; }
@@ -642,6 +576,15 @@ header {
     @media screen and (max-width: 991px) {
       #about .content {
         width: 100%; } }
+
+#letter p.margintop {
+  margin-top: 30px; }
+
+#letter p.nomargin {
+  margin: 0; }
+
+#letter p.signature {
+  font-style: italic; }
 
 #staff .staff h3 {
   margin-bottom: 0;
