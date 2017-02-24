@@ -178,6 +178,10 @@
     .box
       .view
         font-size: 1.8rem
+        &--sp
+          cursor: pointer
+        &__inner div
+          width: 100%
         @media screen and (max-width: $breakSmall)
           font-size: 1.3rem
         @media screen and (max-width: $breakVerySmall)
@@ -358,15 +362,10 @@
     justify-content: center
     align-items: center
     padding: 100px 50px 0
+    div
+      width: 100%
     @media screen and (max-width: $breakSmall)
       padding: 70px 10px 0
-    span
-      font-family: 'Sofia Pro Medium', sans-serif
-      color: $UBBlue
-      &:hover
-        cursor: pointer
-    &__inner
-      height: auto
   #here-button
     display: inline-block
     width: 65%

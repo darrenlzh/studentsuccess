@@ -30,6 +30,7 @@ function resizeBoxes() {
   Array.prototype.forEach.call(views, function(view, i) {
     view.style.height = viewWidth;
   });
+
   var refWidth = document.getElementById('ssbr').offsetWidth,
       students = document.querySelectorAll('div.student');
   Array.prototype.forEach.call(students, function(student, i) {
@@ -86,8 +87,8 @@ function clickControl() {
   var views = document.querySelectorAll('div.box div.view');
   Array.prototype.forEach.call(views, function(view, i) {
     view.addEventListener('click', function() {
+      var notThese = document.querySelectorAll('div.is-expanded');
       if (this.parentNode.classList.contains('is-collapsed')) {
-        var notThese = document.querySelectorAll('div.is-expanded');
         Array.prototype.forEach.call(notThese, function(notThis, i) {
           notThis.classList.remove('is-expanded');
           notThis.classList.add('is-collapsed');
@@ -104,6 +105,30 @@ function clickControl() {
       }
     });
   });
+
+  var studentPhotoViews = document.querySelectorAll('div.student div.view--sp');
+  Array.prototype.forEach.call(studentPhotoViews, function(view, i) {
+    view.addEventListener('click', function() {
+      var notThese = document.querySelectorAll('div.is-expanded'),
+          studentHeading = this.parentNode.parentNode.querySelector('div.student__heading');
+      if (studentHeading.classList.contains('is-collapsed')) {
+        Array.prototype.forEach.call(notThese, function(notThis, i) {
+          notThis.classList.remove('is-expanded');
+          notThis.classList.add('is-collapsed');
+        });
+        studentHeading.classList.remove('is-collapsed');
+        studentHeading.classList.add('is-expanded');
+        var that = this;
+        setTimeout(function() {
+          bringIntoView(that, 500);
+        }, 250);
+      } else {
+        studentHeading.classList.remove('is-expanded');
+        studentHeading.classList.add('is-collapsed');
+      }
+    });
+  });
+
   var closes = document.querySelectorAll('div.box div.view-expand div.close');
   Array.prototype.forEach.call(closes, function(close, i) {
     close.addEventListener('click', function() {
@@ -220,6 +245,8 @@ function scrollControl() {
     });
   }
 }
+
+
 
 window.bringIntoView_started = 0;
 window.bringIntoView_ends = 0;

@@ -81,6 +81,8 @@ header {
     header .header__title {
       font-family: 'Sofia Pro ExtraLight',  sans-serif;
       font-size: 2rem; }
+      header .header__title:hover {
+        cursor: default; }
     header .header .fade-elem {
       transition: all .3s ease-in-out;
       opacity: 0; }
@@ -268,7 +270,8 @@ svg.ui-arrow .st0 {
               width: 60px;
               height: 60px; } }
       #main #infographics .infographic:nth-of-type(1) .infographic__text, #main #infographics .infographic:nth-of-type(2) .infographic__text, #main #infographics .infographic:nth-of-type(3) .infographic__text, #main #infographics .infographic:nth-of-type(4) .infographic__text {
-        padding-top: 10px; }
+        padding-top: 10px;
+        width: 100%; }
       #main #infographics .infographic__text {
         color: #666666;
         padding: 35px 20px;
@@ -487,6 +490,10 @@ svg.ui-arrow .st0 {
 
 .grid .student .box .view {
   font-size: 1.8rem; }
+  .grid .student .box .view--sp {
+    cursor: pointer; }
+  .grid .student .box .view__inner div {
+    width: 100%; }
   @media screen and (max-width: 767px) {
     .grid .student .box .view {
       font-size: 1.3rem; } }
@@ -700,16 +707,11 @@ svg.ui-arrow .st0 {
   -ms-flex-align: center;
       align-items: center;
   padding: 100px 50px 0; }
+  #section-heading .inner div {
+    width: 100%; }
   @media screen and (max-width: 767px) {
     #section-heading .inner {
       padding: 70px 10px 0; } }
-  #section-heading .inner span {
-    font-family: 'Sofia Pro Medium', sans-serif;
-    color: #005bbb; }
-    #section-heading .inner span:hover {
-      cursor: pointer; }
-  #section-heading .inner__inner {
-    height: auto; }
 
 #section-heading #here-button {
   display: inline-block;
