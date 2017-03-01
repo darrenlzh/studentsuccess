@@ -1,3 +1,4 @@
+// When page loads
 ready(function() {
   resizeBoxes();
   appearEffects();
@@ -19,6 +20,7 @@ function ready(fn) {
   }
 }
 
+// RESIZE BOXES: Resizes grid and its child elements
 function resizeBoxes() {
   var variable = document.getElementById('dynamic-height-for-grid'),
       variable2 = document.getElementById('dynamic-width-for-expand'),
@@ -50,8 +52,9 @@ function resizeBoxes() {
     svg.setAttribute('width', '320px');
     shape.setAttribute('width', '320px');
   }
-}
+} // END RESIZE BOXES
 
+// Initial load fade animation
 function appearEffects() {
   var fades = document.querySelectorAll('div.fade-elem');
   Array.prototype.forEach.call(fades, function(fade, i) {
@@ -69,6 +72,7 @@ function appearEffects() {
   });
 }
 
+// CHANGE TAB: Controls tabs under About >> Staff
 function changeTab(elem, tabName) {
   var i, j,
       navList = document.querySelectorAll('#about div.sidebar ul li'),
@@ -81,8 +85,9 @@ function changeTab(elem, tabName) {
     navList[j].classList.remove('active');
   }
   elem.parentNode.classList.add('active');
-}
+} // END CHANGE TAB
 
+// CLICK CONTROL: Manages click events on grid
 function clickControl() {
   var views = document.querySelectorAll('div.box div.view');
   Array.prototype.forEach.call(views, function(view, i) {
@@ -147,7 +152,6 @@ function clickControl() {
         });
         this.parentNode.classList.remove('is-collapsed');
         this.parentNode.classList.add('is-expanded');
-        var that = this;
       } else {
         this.parentNode.classList.remove('is-expanded');
         this.parentNode.classList.add('is-collapsed');
@@ -159,13 +163,19 @@ function clickControl() {
       studentProfile = document.querySelector('#student-profile-1 div.student__heading');
   hereButton.addEventListener('click', function() {
     if (studentProfile.classList.contains('is-collapsed')) {
+      var notThese = document.querySelectorAll('div.is-expanded');
+      Array.prototype.forEach.call(notThese, function(notThis, i) {
+        notThis.classList.remove('is-expanded');
+        notThis.classList.add('is-collapsed');
+      });
       studentProfile.classList.remove('is-collapsed');
       studentProfile.classList.add('is-expanded');
     }
     bringIntoView(studentProfile, 500);
   });
-}
+} // END CLICK CONTROL
 
+// HEADER PARALLAX: Parallax effect on header background
 function headerParallax() {
   var hero = document.getElementById('hero'),
       width = window.innerWidth,
@@ -175,8 +185,9 @@ function headerParallax() {
   } else {
     hero.style.backgroundPosition = 'center 0';
   }
-}
+} // END HEADER PARALLAX
 
+// SCROLL CONTROL: Manages scroll events
 function scrollControl() {
   var scrollTop = document.body.scrollTop,
       arrow = document.getElementById('arrow'),
@@ -244,9 +255,7 @@ function scrollControl() {
       }, 150 * (i+1));
     });
   }
-}
-
-
+} // END SCROLL CONTROL
 
 window.bringIntoView_started = 0;
 window.bringIntoView_ends = 0;
