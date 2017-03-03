@@ -1,0 +1,21 @@
+Author: Darren Lim
+Date: Mar 3, 2017
+
+****** IMPORTANT ******
+
+Do the following before deploying to "live":
+1. Copy and paste the below PHP script snippet for GTM on Student Success.
+2. Navigate to >> _site >> index.html.
+3. Place directly after the <body> tag in "index.html".
+
+<?php include_once( '/htdocs/lib/google/gtm/web-container.php' ); /* Google Tag Manager Service */ ?>
+
+
+****** NOTES ******
+
+When uploading files to "live" on SENS, follow these instructions:
+
+1. Navigate to >> _site.
+2. Upload folders "css", "fonts", "img", and "js" only.
+3. Upload "index.html" only.
+4. DO NOT upload "gulpfile.js" or "package.json".

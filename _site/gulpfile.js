@@ -63,7 +63,7 @@ gulp.task('pug', function(){
 
 /**
  * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
+ * Watch html files & reload BrowserSync
  */
 gulp.task('watch', function () {
     gulp.watch('_sass/*.sass', ['sass']);
